@@ -47,11 +47,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="fmrBuscarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrBuscarFuncionario.Designer.cs">
+      <DependentUpon>fmrBuscarFuncionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscaAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscaAluno.Designer.cs">
+      <DependentUpon>frmBuscaAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarJogo.Designer.cs">
+      <DependentUpon>frmBuscarJogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroAluno.Designer.cs">
+      <DependentUpon>frmCadastroAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroEquipamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroEquipamento.Designer.cs">
+      <DependentUpon>frmCadastroEquipamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroFuncionario.Designer.cs">
+      <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastroJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroJogo.Designer.cs">
+      <DependentUpon>frmCadastroJogo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTelaInicial.cs">
       <SubType>Form</SubType>
@@ -61,8 +103,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fmrBuscarFuncionario.resx">
+      <DependentUpon>fmrBuscarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscaAluno.resx">
+      <DependentUpon>frmBuscaAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarJogo.resx">
+      <DependentUpon>frmBuscarJogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroAluno.resx">
+      <DependentUpon>frmCadastroAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroEquipamento.resx">
+      <DependentUpon>frmCadastroEquipamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroFuncionario.resx">
+      <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroJogo.resx">
+      <DependentUpon>frmCadastroJogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTelaInicial.resx">
       <DependentUpon>frmTelaInicial.cs</DependentUpon>
