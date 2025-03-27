@@ -17,5 +17,10 @@ namespace sistemaFuturoCraque
             InitializeComponent();
         }
 
+        private void btnCadastroAluno_Click(object sender, EventArgs e)
+        {
+            frmBuscaAluno frm = new frmBuscaAluno();
+            frm.ShowDialog();
+        }
     }
 }

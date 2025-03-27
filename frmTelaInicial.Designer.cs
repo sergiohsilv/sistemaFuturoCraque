@@ -82,6 +82,7 @@
             this.btnCadastroAluno.TabIndex = 4;
             this.btnCadastroAluno.Text = "Alunos";
             this.btnCadastroAluno.UseVisualStyleBackColor = false;
+            this.btnCadastroAluno.Click += new System.EventHandler(this.btnCadastroAluno_Click);
             // 
             // btnCadastroFuncionario
             // 

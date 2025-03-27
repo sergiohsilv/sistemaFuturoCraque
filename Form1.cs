@@ -21,5 +21,11 @@ namespace sistemaFuturoCraque
         {
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            frmTelaInicial frm = new frmTelaInicial();
+            frm.ShowDialog();
+        }
     }
 }
