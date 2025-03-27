@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarJogo));
             this.dgvBuscarJogo = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtBuscarJogo = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnEditarJogo = new System.Windows.Forms.Button();
             this.btnExcluirJogo = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCadastrarJogo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarJogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,26 +50,12 @@
             this.dgvBuscarJogo.Size = new System.Drawing.Size(590, 220);
             this.dgvBuscarJogo.TabIndex = 0;
             // 
-            // textBox1
+            // txtBuscarJogo
             // 
-            this.textBox1.Location = new System.Drawing.Point(212, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(378, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(99, 109);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 25);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "+ Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtBuscarJogo.Location = new System.Drawing.Point(212, 111);
+            this.txtBuscarJogo.Name = "txtBuscarJogo";
+            this.txtBuscarJogo.Size = new System.Drawing.Size(378, 20);
+            this.txtBuscarJogo.TabIndex = 1;
             // 
             // button2
             // 
@@ -110,16 +96,6 @@
             this.btnExcluirJogo.Text = "Excluir";
             this.btnExcluirJogo.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::sistemaFuturoCraque.Properties.Resources.Captura_de_tela_2025_03_13_083650;
-            this.pictureBox1.Location = new System.Drawing.Point(-5, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(814, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -132,6 +108,30 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Buscar Jogo";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::sistemaFuturoCraque.Properties.Resources.Captura_de_tela_2025_03_13_083650;
+            this.pictureBox1.Location = new System.Drawing.Point(-5, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(814, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCadastrarJogo
+            // 
+            this.btnCadastrarJogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastrarJogo.BackgroundImage")));
+            this.btnCadastrarJogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCadastrarJogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastrarJogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarJogo.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCadastrarJogo.Location = new System.Drawing.Point(99, 109);
+            this.btnCadastrarJogo.Name = "btnCadastrarJogo";
+            this.btnCadastrarJogo.Size = new System.Drawing.Size(104, 25);
+            this.btnCadastrarJogo.TabIndex = 2;
+            this.btnCadastrarJogo.Text = "+ Cadastrar";
+            this.btnCadastrarJogo.UseVisualStyleBackColor = true;
+            // 
             // frmBuscarJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,8 +142,8 @@
             this.Controls.Add(this.btnExcluirJogo);
             this.Controls.Add(this.btnEditarJogo);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnCadastrarJogo);
+            this.Controls.Add(this.txtBuscarJogo);
             this.Controls.Add(this.dgvBuscarJogo);
             this.Name = "frmBuscarJogo";
             this.Text = "frmBuscarJogo";
@@ -157,8 +157,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvBuscarJogo;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtBuscarJogo;
+        private System.Windows.Forms.Button btnCadastrarJogo;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnEditarJogo;
         private System.Windows.Forms.Button btnExcluirJogo;

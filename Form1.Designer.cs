@@ -63,6 +63,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(250, 26);
             this.txtSenha.TabIndex = 1;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
@@ -191,6 +192,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
