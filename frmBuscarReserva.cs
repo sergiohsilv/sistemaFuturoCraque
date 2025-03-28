@@ -31,14 +31,15 @@ namespace sistemaFuturoCraque
                 using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
                 {
                     cn.Open();
-                    var SqlQuery = "Select e.idEquipe FROM equipe a JOIN reserva r ON e.idEquipe = r.idEquipe WHERE like '%" + txtBuscarReserva.Text + "%'" +
-                        "Select eq.idEquipamento FROM equipamento a JOIN reserva r ON eq.idEquipamento = r.idEquipamento WHERE like '%" + txtBuscarReserva.Text + "%'" +
-                        "Select f.idFunc FROM funcionario a JOIN reserva r ON f.idFunc = r.idFunc WHERE like '%" + txtBuscarReserva.Text + "%'" +
-                        "OR ridReserva like '%" + txtBuscarReserva.Text + "%'" +
-                        "OR dtReserva like '%" + txtBuscarReserva.Text + "%'" +
-                        "OR dtDevolucao like '%" + txtBuscarReserva.Text + "%'" +
-                        "OR qtdEquipamento like '%" + txtBuscarReserva.Text + "%'" +
-                        "OR itemEquipamento like '%" + txtBuscarReserva.Text + "%'";
+                    var SqlQuery = @"SELECT er.*, e.nome AS nome_equipamento, f.nome AS nome_funcionario, eq.nome AS nome_equipe
+                       FROM EquipamentosReservados er
+                       INNER JOIN Equipamentos e ON er.idEquipamento = e.idEquipamento
+                       INNER JOIN Funcionarios f ON er.idFuncionario = f.idFuncionario
+                       INNER JOIN Equipes eq ON er.idEquipe = eq.idEquipe
+                       WHERE 
+                           (@idReserva IS NULL OR er.idReserva = @idReserva) AND
+                           (@idEquipe IS NULL OR er.idEquipe = @idEquipe) AND
+                           (@idFuncionario IS NULL OR er.idFuncionario = @idFuncionario)";
 
 
                     using (SqlDataAdapter da = new SqlDataAdapter(SqlQuery, cn))
