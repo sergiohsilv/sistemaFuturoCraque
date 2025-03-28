@@ -124,6 +124,7 @@
             this.btnCadastarFunc.TabIndex = 7;
             this.btnCadastarFunc.Text = "+  Cadastrar";
             this.btnCadastarFunc.UseVisualStyleBackColor = true;
+            this.btnCadastarFunc.Click += new System.EventHandler(this.btnCadastarFunc_Click);
             // 
             // pictureBox1
             // 

@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarReserva));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvBuscaReserva = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscarReserva = new System.Windows.Forms.TextBox();
             this.btnCadastrarReserva = new System.Windows.Forms.Button();
             this.btnBuscarReserva = new System.Windows.Forms.Button();
             this.btnEditarReserva = new System.Windows.Forms.Button();
             this.btnExcluirReserva = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBuscaReserva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,15 +53,15 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Buscar Reserva";
             // 
-            // dataGridView1
+            // dgvBuscaReserva
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(99, 150);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(590, 220);
-            this.dataGridView1.TabIndex = 11;
+            this.dgvBuscaReserva.AllowUserToOrderColumns = true;
+            this.dgvBuscaReserva.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvBuscaReserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBuscaReserva.Location = new System.Drawing.Point(99, 150);
+            this.dgvBuscaReserva.Name = "dgvBuscaReserva";
+            this.dgvBuscaReserva.Size = new System.Drawing.Size(590, 220);
+            this.dgvBuscaReserva.TabIndex = 11;
             // 
             // pictureBox1
             // 
@@ -73,12 +73,12 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // txtBuscarReserva
             // 
-            this.textBox1.Location = new System.Drawing.Point(212, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(378, 20);
-            this.textBox1.TabIndex = 12;
+            this.txtBuscarReserva.Location = new System.Drawing.Point(212, 111);
+            this.txtBuscarReserva.Name = "txtBuscarReserva";
+            this.txtBuscarReserva.Size = new System.Drawing.Size(378, 20);
+            this.txtBuscarReserva.TabIndex = 12;
             // 
             // btnCadastrarReserva
             // 
@@ -93,6 +93,7 @@
             this.btnCadastrarReserva.TabIndex = 13;
             this.btnCadastrarReserva.Text = "+ Cadastrar";
             this.btnCadastrarReserva.UseVisualStyleBackColor = true;
+            this.btnCadastrarReserva.Click += new System.EventHandler(this.btnCadastrarReserva_Click);
             // 
             // btnBuscarReserva
             // 
@@ -106,6 +107,7 @@
             this.btnBuscarReserva.TabIndex = 14;
             this.btnBuscarReserva.Text = "Buscar";
             this.btnBuscarReserva.UseVisualStyleBackColor = false;
+            this.btnBuscarReserva.Click += new System.EventHandler(this.btnBuscarReserva_Click);
             // 
             // btnEditarReserva
             // 
@@ -142,13 +144,13 @@
             this.Controls.Add(this.btnEditarReserva);
             this.Controls.Add(this.btnBuscarReserva);
             this.Controls.Add(this.btnCadastrarReserva);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtBuscarReserva);
+            this.Controls.Add(this.dgvBuscaReserva);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmBuscarReserva";
             this.Text = "frmBuscarReserva";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBuscaReserva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -159,8 +161,8 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dgvBuscaReserva;
+        private System.Windows.Forms.TextBox txtBuscarReserva;
         private System.Windows.Forms.Button btnCadastrarReserva;
         private System.Windows.Forms.Button btnBuscarReserva;
         private System.Windows.Forms.Button btnEditarReserva;

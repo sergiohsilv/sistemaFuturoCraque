@@ -82,6 +82,7 @@
             this.btnBuscarAluno.TabIndex = 10;
             this.btnBuscarAluno.Text = "Buscar";
             this.btnBuscarAluno.UseVisualStyleBackColor = false;
+            this.btnBuscarAluno.Click += new System.EventHandler(this.btnBuscarAluno_Click);
             // 
             // btnEditarAluno
             // 
@@ -124,6 +125,7 @@
             this.btnCadastrarAluno.TabIndex = 11;
             this.btnCadastrarAluno.Text = "+  Cadastrar";
             this.btnCadastrarAluno.UseVisualStyleBackColor = true;
+            this.btnCadastrarAluno.Click += new System.EventHandler(this.btnCadastrarAluno_Click);
             // 
             // pictureBox1
             // 

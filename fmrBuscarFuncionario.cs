@@ -16,5 +16,11 @@ namespace sistemaFuturoCraque
         {
             InitializeComponent();
         }
+
+        private void btnCadastarFunc_Click(object sender, EventArgs e)
+        {
+            frmCadastroFuncionario frm = new frmCadastroFuncionario();
+            frm.ShowDialog();
+        }
     }
 }

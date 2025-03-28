@@ -41,10 +41,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtEquipamento = new System.Windows.Forms.TextBox();
             this.btnCancelarReserva = new System.Windows.Forms.Button();
             this.btnCadastrarReserva = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtEquipamento = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtIdReserva = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,15 +65,15 @@
             // dtpReserva
             // 
             this.dtpReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpReserva.Location = new System.Drawing.Point(130, 195);
+            this.dtpReserva.Location = new System.Drawing.Point(310, 192);
             this.dtpReserva.Name = "dtpReserva";
-            this.dtpReserva.Size = new System.Drawing.Size(199, 22);
+            this.dtpReserva.Size = new System.Drawing.Size(182, 22);
             this.dtpReserva.TabIndex = 10;
             // 
             // dtpDevolucao
             // 
             this.dtpDevolucao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDevolucao.Location = new System.Drawing.Point(341, 195);
+            this.dtpDevolucao.Location = new System.Drawing.Point(504, 192);
             this.dtpDevolucao.Name = "dtpDevolucao";
             this.dtpDevolucao.Size = new System.Drawing.Size(195, 22);
             this.dtpDevolucao.TabIndex = 11;
@@ -80,16 +82,16 @@
             // 
             this.cmbEquipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEquipe.FormattingEnabled = true;
-            this.cmbEquipe.Location = new System.Drawing.Point(551, 194);
+            this.cmbEquipe.Location = new System.Drawing.Point(130, 243);
             this.cmbEquipe.Name = "cmbEquipe";
-            this.cmbEquipe.Size = new System.Drawing.Size(121, 24);
+            this.cmbEquipe.Size = new System.Drawing.Size(178, 24);
             this.cmbEquipe.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(129, 177);
+            this.label2.Location = new System.Drawing.Point(313, 174);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 16);
             this.label2.TabIndex = 14;
@@ -99,7 +101,7 @@
             // 
             this.cmbFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbFuncionario.FormattingEnabled = true;
-            this.cmbFuncionario.Location = new System.Drawing.Point(494, 250);
+            this.cmbFuncionario.Location = new System.Drawing.Point(130, 304);
             this.cmbFuncionario.Name = "cmbFuncionario";
             this.cmbFuncionario.Size = new System.Drawing.Size(178, 24);
             this.cmbFuncionario.TabIndex = 15;
@@ -107,7 +109,7 @@
             // txtQuantidadeEquipamento
             // 
             this.txtQuantidadeEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantidadeEquipamento.Location = new System.Drawing.Point(341, 251);
+            this.txtQuantidadeEquipamento.Location = new System.Drawing.Point(534, 246);
             this.txtQuantidadeEquipamento.Name = "txtQuantidadeEquipamento";
             this.txtQuantidadeEquipamento.Size = new System.Drawing.Size(138, 22);
             this.txtQuantidadeEquipamento.TabIndex = 16;
@@ -116,7 +118,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(342, 177);
+            this.label3.Location = new System.Drawing.Point(505, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 16);
             this.label3.TabIndex = 17;
@@ -126,7 +128,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(553, 177);
+            this.label4.Location = new System.Drawing.Point(132, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 16);
             this.label4.TabIndex = 18;
@@ -136,7 +138,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(129, 231);
+            this.label5.Location = new System.Drawing.Point(322, 226);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 16);
             this.label5.TabIndex = 19;
@@ -146,7 +148,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(342, 231);
+            this.label6.Location = new System.Drawing.Point(535, 226);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 16);
             this.label6.TabIndex = 20;
@@ -156,11 +158,18 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(494, 231);
+            this.label7.Location = new System.Drawing.Point(130, 285);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 16);
             this.label7.TabIndex = 21;
             this.label7.Text = "Funcionário";
+            // 
+            // txtEquipamento
+            // 
+            this.txtEquipamento.Location = new System.Drawing.Point(323, 247);
+            this.txtEquipamento.Name = "txtEquipamento";
+            this.txtEquipamento.Size = new System.Drawing.Size(199, 20);
+            this.txtEquipamento.TabIndex = 24;
             // 
             // btnCancelarReserva
             // 
@@ -200,18 +209,30 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // txtEquipamento
+            // label8
             // 
-            this.txtEquipamento.Location = new System.Drawing.Point(130, 252);
-            this.txtEquipamento.Name = "txtEquipamento";
-            this.txtEquipamento.Size = new System.Drawing.Size(199, 20);
-            this.txtEquipamento.TabIndex = 24;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(135, 174);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 16);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "ID Reserva";
+            // 
+            // txtIdReserva
+            // 
+            this.txtIdReserva.Location = new System.Drawing.Point(130, 192);
+            this.txtIdReserva.Name = "txtIdReserva";
+            this.txtIdReserva.Size = new System.Drawing.Size(174, 20);
+            this.txtIdReserva.TabIndex = 26;
             // 
             // frmCadastrarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtIdReserva);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.txtEquipamento);
             this.Controls.Add(this.btnCancelarReserva);
             this.Controls.Add(this.btnCadastrarReserva);
@@ -254,5 +275,7 @@
         private System.Windows.Forms.Button btnCadastrarReserva;
         private System.Windows.Forms.Button btnCancelarReserva;
         private System.Windows.Forms.TextBox txtEquipamento;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtIdReserva;
     }
 }

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarJogo));
             this.dgvBuscarJogo = new System.Windows.Forms.DataGridView();
             this.txtBuscarJogo = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBuscarJogo = new System.Windows.Forms.Button();
             this.btnEditarJogo = new System.Windows.Forms.Button();
             this.btnExcluirJogo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,18 +57,18 @@
             this.txtBuscarJogo.Size = new System.Drawing.Size(378, 20);
             this.txtBuscarJogo.TabIndex = 1;
             // 
-            // button2
+            // btnBuscarJogo
             // 
-            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(614, 111);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnBuscarJogo.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnBuscarJogo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscarJogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarJogo.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnBuscarJogo.Location = new System.Drawing.Point(614, 111);
+            this.btnBuscarJogo.Name = "btnBuscarJogo";
+            this.btnBuscarJogo.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarJogo.TabIndex = 3;
+            this.btnBuscarJogo.Text = "Buscar";
+            this.btnBuscarJogo.UseVisualStyleBackColor = false;
             // 
             // btnEditarJogo
             // 
@@ -131,6 +131,7 @@
             this.btnCadastrarJogo.TabIndex = 2;
             this.btnCadastrarJogo.Text = "+ Cadastrar";
             this.btnCadastrarJogo.UseVisualStyleBackColor = true;
+            this.btnCadastrarJogo.Click += new System.EventHandler(this.btnCadastrarJogo_Click);
             // 
             // frmBuscarJogo
             // 
@@ -141,7 +142,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExcluirJogo);
             this.Controls.Add(this.btnEditarJogo);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnBuscarJogo);
             this.Controls.Add(this.btnCadastrarJogo);
             this.Controls.Add(this.txtBuscarJogo);
             this.Controls.Add(this.dgvBuscarJogo);
@@ -159,7 +160,7 @@
         private System.Windows.Forms.DataGridView dgvBuscarJogo;
         private System.Windows.Forms.TextBox txtBuscarJogo;
         private System.Windows.Forms.Button btnCadastrarJogo;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBuscarJogo;
         private System.Windows.Forms.Button btnEditarJogo;
         private System.Windows.Forms.Button btnExcluirJogo;
         private System.Windows.Forms.PictureBox pictureBox1;

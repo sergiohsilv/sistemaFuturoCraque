@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace sistemaFuturoCraque
 {
-    public partial class frmBuscarJogo : Form
+    public partial class frmCadastroEquipe : Form
     {
-        public frmBuscarJogo()
+        public frmCadastroEquipe()
         {
             InitializeComponent();
-        }
-
-        private void btnCadastrarJogo_Click(object sender, EventArgs e)
-        {
-            frmCadastroJogo frm = new frmCadastroJogo();
-            frm.ShowDialog();
         }
     }
 }

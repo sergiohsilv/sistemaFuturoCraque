@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscaEquipamento));
             this.dgvBuscarEquipamento = new System.Windows.Forms.DataGridView();
             this.txtBuscaEquipamento = new System.Windows.Forms.TextBox();
-            this.btnCadastrarEquipamento = new System.Windows.Forms.Button();
             this.btnBuscarEquipamento = new System.Windows.Forms.Button();
             this.btnExcluirEquipamento = new System.Windows.Forms.Button();
             this.btnEditarEquipamento = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCadastrarEquipamento = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarEquipamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,20 +56,6 @@
             this.txtBuscaEquipamento.Name = "txtBuscaEquipamento";
             this.txtBuscaEquipamento.Size = new System.Drawing.Size(378, 20);
             this.txtBuscaEquipamento.TabIndex = 1;
-            // 
-            // btnCadastrarEquipamento
-            // 
-            this.btnCadastrarEquipamento.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastrarEquipamento.BackgroundImage")));
-            this.btnCadastrarEquipamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCadastrarEquipamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastrarEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarEquipamento.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastrarEquipamento.Location = new System.Drawing.Point(99, 109);
-            this.btnCadastrarEquipamento.Name = "btnCadastrarEquipamento";
-            this.btnCadastrarEquipamento.Size = new System.Drawing.Size(104, 25);
-            this.btnCadastrarEquipamento.TabIndex = 2;
-            this.btnCadastrarEquipamento.Text = "+ Cadastrar";
-            this.btnCadastrarEquipamento.UseVisualStyleBackColor = true;
             // 
             // btnBuscarEquipamento
             // 
@@ -109,16 +95,6 @@
             this.btnEditarEquipamento.Text = "Editar";
             this.btnEditarEquipamento.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::sistemaFuturoCraque.Properties.Resources.Captura_de_tela_2025_03_13_083650;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(814, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -130,6 +106,31 @@
             this.label1.Size = new System.Drawing.Size(265, 31);
             this.label1.TabIndex = 8;
             this.label1.Text = "Buscar Equipamento";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::sistemaFuturoCraque.Properties.Resources.Captura_de_tela_2025_03_13_083650;
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(814, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCadastrarEquipamento
+            // 
+            this.btnCadastrarEquipamento.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastrarEquipamento.BackgroundImage")));
+            this.btnCadastrarEquipamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCadastrarEquipamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastrarEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarEquipamento.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCadastrarEquipamento.Location = new System.Drawing.Point(99, 109);
+            this.btnCadastrarEquipamento.Name = "btnCadastrarEquipamento";
+            this.btnCadastrarEquipamento.Size = new System.Drawing.Size(104, 25);
+            this.btnCadastrarEquipamento.TabIndex = 2;
+            this.btnCadastrarEquipamento.Text = "+ Cadastrar";
+            this.btnCadastrarEquipamento.UseVisualStyleBackColor = true;
+            this.btnCadastrarEquipamento.Click += new System.EventHandler(this.btnCadastrarEquipamento_Click);
             // 
             // frmBuscaEquipamento
             // 

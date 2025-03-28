@@ -31,11 +31,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCadastroAluno = new System.Windows.Forms.Button();
-            this.btnCadastroFuncionario = new System.Windows.Forms.Button();
-            this.btnCadastroEquipe = new System.Windows.Forms.Button();
-            this.btnCadastroJogos = new System.Windows.Forms.Button();
+            this.btnFuncionario = new System.Windows.Forms.Button();
+            this.btnEquipes = new System.Windows.Forms.Button();
+            this.btnJogos = new System.Windows.Forms.Button();
             this.btnCadastroEquipamentos = new System.Windows.Forms.Button();
-            this.btnCadastroReserva = new System.Windows.Forms.Button();
+            this.btnReserva = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -84,41 +84,44 @@
             this.btnCadastroAluno.UseVisualStyleBackColor = false;
             this.btnCadastroAluno.Click += new System.EventHandler(this.btnCadastroAluno_Click);
             // 
-            // btnCadastroFuncionario
+            // btnFuncionario
             // 
-            this.btnCadastroFuncionario.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnCadastroFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastroFuncionario.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastroFuncionario.Location = new System.Drawing.Point(12, 198);
-            this.btnCadastroFuncionario.Name = "btnCadastroFuncionario";
-            this.btnCadastroFuncionario.Size = new System.Drawing.Size(120, 23);
-            this.btnCadastroFuncionario.TabIndex = 6;
-            this.btnCadastroFuncionario.Text = "Funcionários";
-            this.btnCadastroFuncionario.UseVisualStyleBackColor = false;
+            this.btnFuncionario.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFuncionario.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnFuncionario.Location = new System.Drawing.Point(12, 198);
+            this.btnFuncionario.Name = "btnFuncionario";
+            this.btnFuncionario.Size = new System.Drawing.Size(120, 23);
+            this.btnFuncionario.TabIndex = 6;
+            this.btnFuncionario.Text = "Funcionários";
+            this.btnFuncionario.UseVisualStyleBackColor = false;
+            this.btnFuncionario.Click += new System.EventHandler(this.btnFuncionario_Click);
             // 
-            // btnCadastroEquipe
+            // btnEquipes
             // 
-            this.btnCadastroEquipe.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnCadastroEquipe.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastroEquipe.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastroEquipe.Location = new System.Drawing.Point(12, 232);
-            this.btnCadastroEquipe.Name = "btnCadastroEquipe";
-            this.btnCadastroEquipe.Size = new System.Drawing.Size(120, 23);
-            this.btnCadastroEquipe.TabIndex = 7;
-            this.btnCadastroEquipe.Text = "Equipes";
-            this.btnCadastroEquipe.UseVisualStyleBackColor = false;
+            this.btnEquipes.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnEquipes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEquipes.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEquipes.Location = new System.Drawing.Point(12, 232);
+            this.btnEquipes.Name = "btnEquipes";
+            this.btnEquipes.Size = new System.Drawing.Size(120, 23);
+            this.btnEquipes.TabIndex = 7;
+            this.btnEquipes.Text = "Equipes";
+            this.btnEquipes.UseVisualStyleBackColor = false;
+            this.btnEquipes.Click += new System.EventHandler(this.btnEquipes_Click);
             // 
-            // btnCadastroJogos
+            // btnJogos
             // 
-            this.btnCadastroJogos.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnCadastroJogos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastroJogos.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastroJogos.Location = new System.Drawing.Point(12, 264);
-            this.btnCadastroJogos.Name = "btnCadastroJogos";
-            this.btnCadastroJogos.Size = new System.Drawing.Size(120, 23);
-            this.btnCadastroJogos.TabIndex = 8;
-            this.btnCadastroJogos.Text = "Jogos";
-            this.btnCadastroJogos.UseVisualStyleBackColor = false;
+            this.btnJogos.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnJogos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnJogos.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnJogos.Location = new System.Drawing.Point(12, 264);
+            this.btnJogos.Name = "btnJogos";
+            this.btnJogos.Size = new System.Drawing.Size(120, 23);
+            this.btnJogos.TabIndex = 8;
+            this.btnJogos.Text = "Jogos";
+            this.btnJogos.UseVisualStyleBackColor = false;
+            this.btnJogos.Click += new System.EventHandler(this.btnJogos_Click);
             // 
             // btnCadastroEquipamentos
             // 
@@ -131,18 +134,20 @@
             this.btnCadastroEquipamentos.TabIndex = 9;
             this.btnCadastroEquipamentos.Text = "Equipamentos";
             this.btnCadastroEquipamentos.UseVisualStyleBackColor = false;
+            this.btnCadastroEquipamentos.Click += new System.EventHandler(this.btnCadastroEquipamentos_Click);
             // 
-            // btnCadastroReserva
+            // btnReserva
             // 
-            this.btnCadastroReserva.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnCadastroReserva.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastroReserva.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastroReserva.Location = new System.Drawing.Point(14, 330);
-            this.btnCadastroReserva.Name = "btnCadastroReserva";
-            this.btnCadastroReserva.Size = new System.Drawing.Size(118, 23);
-            this.btnCadastroReserva.TabIndex = 10;
-            this.btnCadastroReserva.Text = "Reserva";
-            this.btnCadastroReserva.UseVisualStyleBackColor = false;
+            this.btnReserva.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnReserva.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReserva.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnReserva.Location = new System.Drawing.Point(14, 330);
+            this.btnReserva.Name = "btnReserva";
+            this.btnReserva.Size = new System.Drawing.Size(118, 23);
+            this.btnReserva.TabIndex = 10;
+            this.btnReserva.Text = "Reserva";
+            this.btnReserva.UseVisualStyleBackColor = false;
+            this.btnReserva.Click += new System.EventHandler(this.btnReserva_Click);
             // 
             // btnRelatorio
             // 
@@ -205,11 +210,11 @@
             this.ClientSize = new System.Drawing.Size(914, 530);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnRelatorio);
-            this.Controls.Add(this.btnCadastroReserva);
+            this.Controls.Add(this.btnReserva);
             this.Controls.Add(this.btnCadastroEquipamentos);
-            this.Controls.Add(this.btnCadastroJogos);
-            this.Controls.Add(this.btnCadastroEquipe);
-            this.Controls.Add(this.btnCadastroFuncionario);
+            this.Controls.Add(this.btnJogos);
+            this.Controls.Add(this.btnEquipes);
+            this.Controls.Add(this.btnFuncionario);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnCadastroAluno);
             this.Controls.Add(this.label2);
@@ -234,11 +239,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnCadastroAluno;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button btnCadastroFuncionario;
-        private System.Windows.Forms.Button btnCadastroEquipe;
-        private System.Windows.Forms.Button btnCadastroJogos;
+        private System.Windows.Forms.Button btnFuncionario;
+        private System.Windows.Forms.Button btnEquipes;
+        private System.Windows.Forms.Button btnJogos;
         private System.Windows.Forms.Button btnCadastroEquipamentos;
-        private System.Windows.Forms.Button btnCadastroReserva;
+        private System.Windows.Forms.Button btnReserva;
         private System.Windows.Forms.Button btnRelatorio;
         private System.Windows.Forms.Button btnSair;
     }
