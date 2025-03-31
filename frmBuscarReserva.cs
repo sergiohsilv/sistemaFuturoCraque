@@ -31,17 +31,11 @@ namespace sistemaFuturoCraque
                 using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
                 {
                     cn.Open();
-                    var SqlQuery = @"SELECT er.*, e.nome AS nome_equipamento, f.nome AS nome_funcionario, eq.nome AS nome_equipe
-                       FROM EquipamentosReservados er
-                       INNER JOIN Equipamentos e ON er.idEquipamento = e.idEquipamento
-                       INNER JOIN Funcionarios f ON er.idFuncionario = f.idFuncionario
-                       INNER JOIN Equipes eq ON er.idEquipe = eq.idEquipe
-                       WHERE 
-                           (@idReserva IS NULL OR er.idReserva = @idReserva) AND
-                           (@idEquipe IS NULL OR er.idEquipe = @idEquipe) AND
-                           (@idFuncionario IS NULL OR er.idFuncionario = @idFuncionario)";
-
-
+                    var SqlQuery = "Select*from reserva where idReserva like '%" + txtBuscarReserva + "%'" +
+                        "OR dtReserva like '%" + txtBuscarReserva + "%'" +
+                        "OR itemEquipamento like '%" + txtBuscarReserva + "%'" +
+                        "OR idFunc like '%" + txtBuscarReserva + "%'" +
+                        "OR idEquipe like '%" + txtBuscarReserva + "%'";
                     using (SqlDataAdapter da = new SqlDataAdapter(SqlQuery, cn))
                     {
                         using (DataTable dt = new DataTable())
@@ -55,7 +49,7 @@ namespace sistemaFuturoCraque
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Falha ao tentar conctar\n\n" + ex.Message);
+                MessageBox.Show("Falha na busca\n\n" + ex.Message);
             }
         }
     }

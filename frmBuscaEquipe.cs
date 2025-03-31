@@ -48,7 +48,7 @@ namespace sistemaFuturoCraque
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Falha ao tentar conctar\n\n" + ex.Message);
+                MessageBox.Show("Falha na busca de dados\n\n" + ex.Message);
             }
         }
     }
