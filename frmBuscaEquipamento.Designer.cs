@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCadastrarEquipamento = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarEquipamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,12 +63,14 @@
             this.btnBuscarEquipamento.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnBuscarEquipamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarEquipamento.ForeColor = System.Drawing.SystemColors.Window;
             this.btnBuscarEquipamento.Location = new System.Drawing.Point(614, 111);
             this.btnBuscarEquipamento.Name = "btnBuscarEquipamento";
             this.btnBuscarEquipamento.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarEquipamento.TabIndex = 3;
             this.btnBuscarEquipamento.Text = "Buscar";
             this.btnBuscarEquipamento.UseVisualStyleBackColor = false;
+            this.btnBuscarEquipamento.Click += new System.EventHandler(this.btnBuscarEquipamento_Click);
             // 
             // btnExcluirEquipamento
             // 
@@ -132,11 +135,26 @@
             this.btnCadastrarEquipamento.UseVisualStyleBackColor = true;
             this.btnCadastrarEquipamento.Click += new System.EventHandler(this.btnCadastrarEquipamento_Click);
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.DimGray;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSair.Location = new System.Drawing.Point(12, 415);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 9;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmBuscaEquipamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEditarEquipamento);
@@ -146,6 +164,7 @@
             this.Controls.Add(this.txtBuscaEquipamento);
             this.Controls.Add(this.dgvBuscarEquipamento);
             this.Name = "frmBuscaEquipamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscaEquipamento";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarEquipamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -164,5 +183,6 @@
         private System.Windows.Forms.Button btnEditarEquipamento;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSair;
     }
 }

@@ -37,6 +37,7 @@
             this.btnExcluirEquipe = new System.Windows.Forms.Button();
             this.btnEditarEquipe = new System.Windows.Forms.Button();
             this.txtBuscarEquipe = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarEquipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -134,11 +135,26 @@
             this.txtBuscarEquipe.Size = new System.Drawing.Size(378, 20);
             this.txtBuscarEquipe.TabIndex = 21;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DimGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Window;
+            this.button1.Location = new System.Drawing.Point(12, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Sair";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmBuscaEquipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBuscarEquipe);
             this.Controls.Add(this.btnEditarEquipe);
             this.Controls.Add(this.btnExcluirEquipe);
@@ -148,6 +164,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmBuscaEquipe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscaEquipe";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarEquipe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -166,5 +183,6 @@
         private System.Windows.Forms.Button btnExcluirEquipe;
         private System.Windows.Forms.Button btnEditarEquipe;
         private System.Windows.Forms.TextBox txtBuscarEquipe;
+        private System.Windows.Forms.Button button1;
     }
 }

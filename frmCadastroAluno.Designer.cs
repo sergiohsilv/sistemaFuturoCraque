@@ -411,6 +411,7 @@
             // 
             this.txtIdAluno.Location = new System.Drawing.Point(60, 125);
             this.txtIdAluno.Name = "txtIdAluno";
+            this.txtIdAluno.ReadOnly = true;
             this.txtIdAluno.Size = new System.Drawing.Size(151, 20);
             this.txtIdAluno.TabIndex = 44;
             // 

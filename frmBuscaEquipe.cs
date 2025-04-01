@@ -31,25 +31,36 @@ namespace sistemaFuturoCraque
                 using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
                 {
                     cn.Open();
-                    var SqlQuery = "Select*from equipe where subEquipe like '%" + txtBuscarEquipe + "%'" +
-                        "OR treinadorEquipe like '%" + txtBuscarEquipe + "%'" +
-                        "OR nomeJogadoresEquipe like '%" + txtBuscarEquipe + "%'" +
-                        "OR idJogadoresEquipe like '%" + txtBuscarEquipe + "%'";
-                    using (SqlDataAdapter da = new SqlDataAdapter(SqlQuery, cn))
+                    var sqlQuery = "SELECT * FROM equipe WHERE subEquipe LIKE @subEquipe OR treinadorEquipe LIKE @treinador OR idEquipe like @idEquipe";
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, cn))
                     {
-                        using (DataTable dt = new DataTable())
+                        cmd.Parameters.AddWithValue("@idEquipe" , "%" + txtBuscarEquipe.Text );
+                        cmd.Parameters.AddWithValue("@subEquipe", "%" + txtBuscarEquipe.Text );
+                        cmd.Parameters.AddWithValue("@treinador", "%" + txtBuscarEquipe.Text );
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            da.Fill(dt);
+                            DataTable dt = new DataTable();
+                            dt.Load(reader);
                             dgvBuscarEquipe.DataSource = dt;
+
                         }
                     }
-
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Falha na busca de dados\n\n" + ex.Message);
+                MessageBox.Show("Falha na Busca de dados\n\n" + ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmTelaInicial frm = new frmTelaInicial();
+            frm.Show();
         }
     }
 }

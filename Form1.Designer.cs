@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnLogar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -65,21 +65,21 @@
             this.txtSenha.TabIndex = 1;
             this.txtSenha.UseSystemPasswordChar = true;
             // 
-            // btnLogin
+            // btnLogar
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLogin.Location = new System.Drawing.Point(110, 371);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(111, 31);
-            this.btnLogin.TabIndex = 2;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogar.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnLogar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLogar.FlatAppearance.BorderColor = System.Drawing.Color.Snow;
+            this.btnLogar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnLogar.Location = new System.Drawing.Point(110, 371);
+            this.btnLogar.Name = "btnLogar";
+            this.btnLogar.Size = new System.Drawing.Size(111, 31);
+            this.btnLogar.TabIndex = 2;
+            this.btnLogar.Text = "Login";
+            this.btnLogar.UseVisualStyleBackColor = false;
+            this.btnLogar.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label1
             // 
@@ -188,13 +188,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -206,7 +207,7 @@
 
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnLogar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

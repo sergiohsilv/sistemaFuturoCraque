@@ -104,6 +104,7 @@
             // 
             this.txtIdEquipe.Location = new System.Drawing.Point(216, 181);
             this.txtIdEquipe.Name = "txtIdEquipe";
+            this.txtIdEquipe.ReadOnly = true;
             this.txtIdEquipe.Size = new System.Drawing.Size(186, 20);
             this.txtIdEquipe.TabIndex = 19;
             // 
@@ -144,6 +145,7 @@
             this.btnCadastrarEquipe.TabIndex = 3;
             this.btnCadastrarEquipe.Text = "Cadastrar";
             this.btnCadastrarEquipe.UseVisualStyleBackColor = true;
+            this.btnCadastrarEquipe.Click += new System.EventHandler(this.btnCadastrarEquipe_Click);
             // 
             // frmCadastroEquipe
             // 

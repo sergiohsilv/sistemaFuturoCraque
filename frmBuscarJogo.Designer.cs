@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCadastrarJogo = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarJogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +70,7 @@
             this.btnBuscarJogo.TabIndex = 3;
             this.btnBuscarJogo.Text = "Buscar";
             this.btnBuscarJogo.UseVisualStyleBackColor = false;
+            this.btnBuscarJogo.Click += new System.EventHandler(this.btnBuscarJogo_Click);
             // 
             // btnEditarJogo
             // 
@@ -133,11 +135,26 @@
             this.btnCadastrarJogo.UseVisualStyleBackColor = true;
             this.btnCadastrarJogo.Click += new System.EventHandler(this.btnCadastrarJogo_Click);
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.DimGray;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSair.Location = new System.Drawing.Point(12, 415);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 8;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmBuscarJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnExcluirJogo);
@@ -147,6 +164,7 @@
             this.Controls.Add(this.txtBuscarJogo);
             this.Controls.Add(this.dgvBuscarJogo);
             this.Name = "frmBuscarJogo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscarJogo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarJogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -165,5 +183,6 @@
         private System.Windows.Forms.Button btnExcluirJogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSair;
     }
 }

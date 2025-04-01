@@ -37,6 +37,7 @@
             this.btnBuscarReserva = new System.Windows.Forms.Button();
             this.btnEditarReserva = new System.Windows.Forms.Button();
             this.btnExcluirReserva = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscaReserva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -135,11 +136,26 @@
             this.btnExcluirReserva.Text = "Excluir";
             this.btnExcluirReserva.UseVisualStyleBackColor = false;
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.DimGray;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSair.Location = new System.Drawing.Point(12, 415);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 17;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmBuscarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnExcluirReserva);
             this.Controls.Add(this.btnEditarReserva);
             this.Controls.Add(this.btnBuscarReserva);
@@ -149,6 +165,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmBuscarReserva";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscarReserva";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscaReserva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -167,5 +184,6 @@
         private System.Windows.Forms.Button btnBuscarReserva;
         private System.Windows.Forms.Button btnEditarReserva;
         private System.Windows.Forms.Button btnExcluirReserva;
+        private System.Windows.Forms.Button btnSair;
     }
 }

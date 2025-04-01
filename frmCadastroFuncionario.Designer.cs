@@ -273,6 +273,7 @@
             // 
             this.txtIdFuncionario.Location = new System.Drawing.Point(65, 173);
             this.txtIdFuncionario.Name = "txtIdFuncionario";
+            this.txtIdFuncionario.ReadOnly = true;
             this.txtIdFuncionario.Size = new System.Drawing.Size(152, 20);
             this.txtIdFuncionario.TabIndex = 28;
             // 

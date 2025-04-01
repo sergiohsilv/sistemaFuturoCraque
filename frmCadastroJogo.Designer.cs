@@ -213,6 +213,7 @@
             // 
             this.txtIdJogo.Location = new System.Drawing.Point(147, 162);
             this.txtIdJogo.Name = "txtIdJogo";
+            this.txtIdJogo.ReadOnly = true;
             this.txtIdJogo.Size = new System.Drawing.Size(144, 20);
             this.txtIdJogo.TabIndex = 21;
             // 

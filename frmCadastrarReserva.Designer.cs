@@ -223,6 +223,7 @@
             // 
             this.txtIdReserva.Location = new System.Drawing.Point(130, 192);
             this.txtIdReserva.Name = "txtIdReserva";
+            this.txtIdReserva.ReadOnly = true;
             this.txtIdReserva.Size = new System.Drawing.Size(174, 20);
             this.txtIdReserva.TabIndex = 26;
             // 

@@ -49,8 +49,15 @@ namespace sistemaFuturoCraque
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Falha na busca\n\n" + ex.Message);
+                MessageBox.Show("Falha na busca de dados\n\n" + ex.Message);
             }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmTelaInicial frm = new frmTelaInicial();
+            frm.Show();
         }
     }
 }
