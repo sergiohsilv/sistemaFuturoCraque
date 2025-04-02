@@ -64,11 +64,15 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.cmbFormaPagamento = new System.Windows.Forms.ComboBox();
+            this.txtIdAluno = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dtpCadastroAluno = new System.Windows.Forms.DateTimePicker();
             this.btnCancelarCadastroAluno = new System.Windows.Forms.Button();
             this.btnCadastarAluno = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtIdAluno = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtCpfResp = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,37 +111,37 @@
             // 
             // txtHorarioTreino
             // 
-            this.txtHorarioTreino.Location = new System.Drawing.Point(550, 239);
+            this.txtHorarioTreino.Location = new System.Drawing.Point(588, 239);
             this.txtHorarioTreino.Name = "txtHorarioTreino";
             this.txtHorarioTreino.Size = new System.Drawing.Size(122, 20);
             this.txtHorarioTreino.TabIndex = 7;
             // 
             // txtAlturaAluno
             // 
-            this.txtAlturaAluno.Location = new System.Drawing.Point(423, 179);
+            this.txtAlturaAluno.Location = new System.Drawing.Point(585, 179);
             this.txtAlturaAluno.Name = "txtAlturaAluno";
-            this.txtAlturaAluno.Size = new System.Drawing.Size(151, 20);
+            this.txtAlturaAluno.Size = new System.Drawing.Size(125, 20);
             this.txtAlturaAluno.TabIndex = 9;
             // 
             // txtPesoAluno
             // 
-            this.txtPesoAluno.Location = new System.Drawing.Point(593, 179);
+            this.txtPesoAluno.Location = new System.Drawing.Point(63, 239);
             this.txtPesoAluno.Name = "txtPesoAluno";
-            this.txtPesoAluno.Size = new System.Drawing.Size(151, 20);
+            this.txtPesoAluno.Size = new System.Drawing.Size(110, 20);
             this.txtPesoAluno.TabIndex = 10;
             // 
             // txtPeBom
             // 
-            this.txtPeBom.Location = new System.Drawing.Point(60, 237);
+            this.txtPeBom.Location = new System.Drawing.Point(192, 239);
             this.txtPeBom.Name = "txtPeBom";
-            this.txtPeBom.Size = new System.Drawing.Size(151, 20);
+            this.txtPeBom.Size = new System.Drawing.Size(92, 20);
             this.txtPeBom.TabIndex = 11;
             // 
             // txtPosicaoAluno
             // 
-            this.txtPosicaoAluno.Location = new System.Drawing.Point(226, 239);
+            this.txtPosicaoAluno.Location = new System.Drawing.Point(306, 239);
             this.txtPosicaoAluno.Name = "txtPosicaoAluno";
-            this.txtPosicaoAluno.Size = new System.Drawing.Size(151, 20);
+            this.txtPosicaoAluno.Size = new System.Drawing.Size(95, 20);
             this.txtPosicaoAluno.TabIndex = 13;
             // 
             // label2
@@ -190,7 +194,7 @@
             // 
             // dtpDataNascimento
             // 
-            this.dtpDataNascimento.Location = new System.Drawing.Point(245, 180);
+            this.dtpDataNascimento.Location = new System.Drawing.Point(244, 180);
             this.dtpDataNascimento.Name = "dtpDataNascimento";
             this.dtpDataNascimento.Size = new System.Drawing.Size(158, 20);
             this.dtpDataNascimento.TabIndex = 19;
@@ -207,7 +211,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(428, 164);
+            this.label7.Location = new System.Drawing.Point(590, 164);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 21;
@@ -216,7 +220,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(596, 164);
+            this.label8.Location = new System.Drawing.Point(61, 222);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 22;
@@ -225,7 +229,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(66, 221);
+            this.label9.Location = new System.Drawing.Point(198, 222);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 13);
             this.label9.TabIndex = 23;
@@ -234,7 +238,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(226, 222);
+            this.label10.Location = new System.Drawing.Point(306, 222);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 13);
             this.label10.TabIndex = 24;
@@ -243,7 +247,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(403, 222);
+            this.label11.Location = new System.Drawing.Point(436, 222);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 13);
             this.label11.TabIndex = 25;
@@ -252,7 +256,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(553, 222);
+            this.label12.Location = new System.Drawing.Point(591, 222);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(74, 13);
             this.label12.TabIndex = 26;
@@ -261,7 +265,7 @@
             // cmbEquipeAluno
             // 
             this.cmbEquipeAluno.FormattingEnabled = true;
-            this.cmbEquipeAluno.Location = new System.Drawing.Point(397, 237);
+            this.cmbEquipeAluno.Location = new System.Drawing.Point(430, 239);
             this.cmbEquipeAluno.Name = "cmbEquipeAluno";
             this.cmbEquipeAluno.Size = new System.Drawing.Size(132, 21);
             this.cmbEquipeAluno.TabIndex = 27;
@@ -276,7 +280,7 @@
             // 
             // txtEnderecoAluno
             // 
-            this.txtEnderecoAluno.Location = new System.Drawing.Point(223, 363);
+            this.txtEnderecoAluno.Location = new System.Drawing.Point(349, 362);
             this.txtEnderecoAluno.Name = "txtEnderecoAluno";
             this.txtEnderecoAluno.Size = new System.Drawing.Size(150, 20);
             this.txtEnderecoAluno.TabIndex = 30;
@@ -290,9 +294,9 @@
             // 
             // txtTelefoneResponsavel
             // 
-            this.txtTelefoneResponsavel.Location = new System.Drawing.Point(57, 363);
+            this.txtTelefoneResponsavel.Location = new System.Drawing.Point(203, 362);
             this.txtTelefoneResponsavel.Name = "txtTelefoneResponsavel";
-            this.txtTelefoneResponsavel.Size = new System.Drawing.Size(135, 20);
+            this.txtTelefoneResponsavel.Size = new System.Drawing.Size(126, 20);
             this.txtTelefoneResponsavel.TabIndex = 32;
             // 
             // txtRgResponsavel
@@ -332,7 +336,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(63, 346);
+            this.label16.Location = new System.Drawing.Point(200, 346);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(49, 13);
             this.label16.TabIndex = 38;
@@ -341,7 +345,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(398, 346);
+            this.label17.Location = new System.Drawing.Point(524, 346);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(108, 13);
             this.label17.TabIndex = 39;
@@ -350,7 +354,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(226, 346);
+            this.label18.Location = new System.Drawing.Point(352, 346);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(53, 13);
             this.label18.TabIndex = 40;
@@ -363,10 +367,34 @@
             "Cartao",
             "Pix",
             "Dinheiro"});
-            this.cmbFormaPagamento.Location = new System.Drawing.Point(397, 362);
+            this.cmbFormaPagamento.Location = new System.Drawing.Point(523, 362);
             this.cmbFormaPagamento.Name = "cmbFormaPagamento";
             this.cmbFormaPagamento.Size = new System.Drawing.Size(121, 21);
             this.cmbFormaPagamento.TabIndex = 41;
+            // 
+            // txtIdAluno
+            // 
+            this.txtIdAluno.Location = new System.Drawing.Point(60, 125);
+            this.txtIdAluno.Name = "txtIdAluno";
+            this.txtIdAluno.ReadOnly = true;
+            this.txtIdAluno.Size = new System.Drawing.Size(151, 20);
+            this.txtIdAluno.TabIndex = 44;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(60, 109);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(48, 13);
+            this.label19.TabIndex = 45;
+            this.label19.Text = "ID Aluno";
+            // 
+            // dtpCadastroAluno
+            // 
+            this.dtpCadastroAluno.Location = new System.Drawing.Point(418, 180);
+            this.dtpCadastroAluno.Name = "dtpCadastroAluno";
+            this.dtpCadastroAluno.Size = new System.Drawing.Size(149, 20);
+            this.dtpCadastroAluno.TabIndex = 46;
             // 
             // btnCancelarCadastroAluno
             // 
@@ -407,28 +435,40 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // txtIdAluno
+            // label20
             // 
-            this.txtIdAluno.Location = new System.Drawing.Point(60, 125);
-            this.txtIdAluno.Name = "txtIdAluno";
-            this.txtIdAluno.ReadOnly = true;
-            this.txtIdAluno.Size = new System.Drawing.Size(151, 20);
-            this.txtIdAluno.TabIndex = 44;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(417, 164);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(90, 13);
+            this.label20.TabIndex = 47;
+            this.label20.Text = "Data de Cadastro";
             // 
-            // label19
+            // label21
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(60, 109);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(48, 13);
-            this.label19.TabIndex = 45;
-            this.label19.Text = "ID Aluno";
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(64, 345);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(92, 13);
+            this.label21.TabIndex = 48;
+            this.label21.Text = "CPF Responsável";
+            // 
+            // txtCpfResp
+            // 
+            this.txtCpfResp.Location = new System.Drawing.Point(57, 362);
+            this.txtCpfResp.Name = "txtCpfResp";
+            this.txtCpfResp.Size = new System.Drawing.Size(129, 20);
+            this.txtCpfResp.TabIndex = 49;
             // 
             // frmCadastroAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtCpfResp);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.dtpCadastroAluno);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.txtIdAluno);
             this.Controls.Add(this.btnCancelarCadastroAluno);
@@ -519,5 +559,9 @@
         private System.Windows.Forms.Button btnCancelarCadastroAluno;
         private System.Windows.Forms.TextBox txtIdAluno;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DateTimePicker dtpCadastroAluno;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtCpfResp;
     }
 }

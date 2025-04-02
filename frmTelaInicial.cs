@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using sistemaFuturoCraque.relatorios;
 
 namespace sistemaFuturoCraque
 {
@@ -64,6 +65,12 @@ namespace sistemaFuturoCraque
             this.Hide();
             Form1 frm = new Form1();
             frm.Show();
+        }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            frmRelAluno frm = new frmRelAluno();
+            frm.ShowDialog();
         }
     }
 }

@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace sistemaFuturoCraque
+namespace sistemaFuturoCraque.relatorios
 {
-    public partial class frmRelatorioAlunos : Form
+    public partial class frmRelAluno : Form
     {
-        public frmRelatorioAlunos()
+        public frmRelAluno()
         {
             InitializeComponent();
+        }
+
+        private void frmRelAluno_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }

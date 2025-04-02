@@ -122,6 +122,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmRelatorioReserva";
             this.Text = "frmRelatorioReserva";
+            this.Load += new System.EventHandler(this.frmRelatorioReserva_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

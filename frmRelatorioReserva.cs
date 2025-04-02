@@ -16,5 +16,10 @@ namespace sistemaFuturoCraque
         {
             InitializeComponent();
         }
+
+        private void frmRelatorioReserva_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

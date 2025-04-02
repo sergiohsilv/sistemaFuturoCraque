@@ -31,21 +31,24 @@ namespace sistemaFuturoCraque
                 using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
                 {
                     cn.Open();
-                    var SqlQuery = "Select*from alunos where idAluno like '%" + txtBuscarAluno + "%'" +
-                        "OR nomeAluno like '%" + txtBuscarAluno + "%'" +
-                        "OR rgAluno like '%" + txtBuscarAluno + "%'" +
-                        "OR cpfAluno like '%" + txtBuscarAluno + "%'" +
-                        "OR nomeRespAluno like '%" + txtBuscarAluno + "%'" +
-                        "OR cpfRespAluno like '%" + txtBuscarAluno + "%'";
-                    using (SqlDataAdapter da = new SqlDataAdapter(SqlQuery, cn))
+                    var sqlQuery = "SELECT * FROM aluno WHERE idAluno LIKE @idAluno OR nomeAluno LIKE @nomeAluno OR cpfAluno like @cpfAluno OR nomeRespAluno like @nomeResp";
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, cn))
                     {
-                        using (DataTable dt = new DataTable())
+                        cmd.Parameters.AddWithValue("@idAluno", "%" + txtBuscarAluno.Text + "%");
+                        cmd.Parameters.AddWithValue("@nomeAluno", "%" + txtBuscarAluno.Text + "%");
+                        cmd.Parameters.AddWithValue("@cpfAluno", "%" + txtBuscarAluno.Text + "%");
+                        cmd.Parameters.AddWithValue("@nomeResp", "%" + txtBuscarAluno.Text + "%");
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            da.Fill(dt);
+                            DataTable dt = new DataTable();
+                            dt.Load(reader);
                             dgvBuscaAluno.DataSource = dt;
+
                         }
                     }
-
                 }
             }
             catch (Exception ex)
