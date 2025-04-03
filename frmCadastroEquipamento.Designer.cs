@@ -34,11 +34,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtItemEquipamento = new System.Windows.Forms.TextBox();
+            this.txtQtdEquipamento = new System.Windows.Forms.TextBox();
+            this.txtFornecedorEquipamento = new System.Windows.Forms.TextBox();
+            this.txtTelefoneEquipamento = new System.Windows.Forms.TextBox();
+            this.txtSiteEquipamento = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCancelarCadastroEquipamento = new System.Windows.Forms.Button();
             this.btnCadastroEquipamento = new System.Windows.Forms.Button();
@@ -98,50 +98,50 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Site";
             // 
-            // textBox1
+            // txtItemEquipamento
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(314, 199);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtItemEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemEquipamento.Location = new System.Drawing.Point(314, 199);
+            this.txtItemEquipamento.Multiline = true;
+            this.txtItemEquipamento.Name = "txtItemEquipamento";
+            this.txtItemEquipamento.Size = new System.Drawing.Size(185, 20);
+            this.txtItemEquipamento.TabIndex = 5;
             // 
-            // textBox2
+            // txtQtdEquipamento
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(521, 199);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtQtdEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQtdEquipamento.Location = new System.Drawing.Point(521, 199);
+            this.txtQtdEquipamento.Multiline = true;
+            this.txtQtdEquipamento.Name = "txtQtdEquipamento";
+            this.txtQtdEquipamento.Size = new System.Drawing.Size(128, 20);
+            this.txtQtdEquipamento.TabIndex = 6;
             // 
-            // textBox3
+            // txtFornecedorEquipamento
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(530, 262);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtFornecedorEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFornecedorEquipamento.Location = new System.Drawing.Point(530, 262);
+            this.txtFornecedorEquipamento.Multiline = true;
+            this.txtFornecedorEquipamento.Name = "txtFornecedorEquipamento";
+            this.txtFornecedorEquipamento.Size = new System.Drawing.Size(167, 20);
+            this.txtFornecedorEquipamento.TabIndex = 7;
             // 
-            // textBox4
+            // txtTelefoneEquipamento
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(99, 262);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(185, 20);
-            this.textBox4.TabIndex = 8;
+            this.txtTelefoneEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefoneEquipamento.Location = new System.Drawing.Point(99, 262);
+            this.txtTelefoneEquipamento.Multiline = true;
+            this.txtTelefoneEquipamento.Name = "txtTelefoneEquipamento";
+            this.txtTelefoneEquipamento.Size = new System.Drawing.Size(185, 20);
+            this.txtTelefoneEquipamento.TabIndex = 8;
             // 
-            // textBox5
+            // txtSiteEquipamento
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(314, 262);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(194, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtSiteEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSiteEquipamento.Location = new System.Drawing.Point(314, 262);
+            this.txtSiteEquipamento.Multiline = true;
+            this.txtSiteEquipamento.Name = "txtSiteEquipamento";
+            this.txtSiteEquipamento.Size = new System.Drawing.Size(194, 20);
+            this.txtSiteEquipamento.TabIndex = 9;
             // 
             // label6
             // 
@@ -183,6 +183,7 @@
             this.btnCadastroEquipamento.TabIndex = 12;
             this.btnCadastroEquipamento.Text = "Cadastrar";
             this.btnCadastroEquipamento.UseVisualStyleBackColor = false;
+            this.btnCadastroEquipamento.Click += new System.EventHandler(this.btnCadastroEquipamento_Click);
             // 
             // pictureBox1
             // 
@@ -222,11 +223,11 @@
             this.Controls.Add(this.btnCadastroEquipamento);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSiteEquipamento);
+            this.Controls.Add(this.txtTelefoneEquipamento);
+            this.Controls.Add(this.txtFornecedorEquipamento);
+            this.Controls.Add(this.txtQtdEquipamento);
+            this.Controls.Add(this.txtItemEquipamento);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -247,11 +248,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtItemEquipamento;
+        private System.Windows.Forms.TextBox txtQtdEquipamento;
+        private System.Windows.Forms.TextBox txtFornecedorEquipamento;
+        private System.Windows.Forms.TextBox txtTelefoneEquipamento;
+        private System.Windows.Forms.TextBox txtSiteEquipamento;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCadastroEquipamento;

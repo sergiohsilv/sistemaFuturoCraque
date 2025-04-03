@@ -36,7 +36,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@
             this.cmbSexoFunc = new System.Windows.Forms.ComboBox();
             this.dtpDataNascimentoFunc = new System.Windows.Forms.DateTimePicker();
             this.txtCargoFunc = new System.Windows.Forms.TextBox();
-            this.txtTelefoneFunc = new System.Windows.Forms.TextBox();
             this.txtEmailFunc = new System.Windows.Forms.TextBox();
             this.txtNomeUsuarioFunc = new System.Windows.Forms.TextBox();
             this.txtSenhaFunc = new System.Windows.Forms.TextBox();
@@ -55,6 +53,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtIdFuncionario = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.dtpCadastroFunc = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,25 +118,16 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(423, 207);
+            this.label7.Location = new System.Drawing.Point(588, 207);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 10;
             this.label7.Text = "Cargo";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(575, 207);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Telefone";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(68, 258);
+            this.label9.Location = new System.Drawing.Point(68, 259);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 12;
@@ -145,7 +136,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(245, 258);
+            this.label10.Location = new System.Drawing.Point(256, 259);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 13);
             this.label10.TabIndex = 13;
@@ -154,7 +145,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(435, 258);
+            this.label11.Location = new System.Drawing.Point(416, 259);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(38, 13);
             this.label11.TabIndex = 14;
@@ -184,6 +175,10 @@
             // cmbSexoFunc
             // 
             this.cmbSexoFunc.FormattingEnabled = true;
+            this.cmbSexoFunc.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino",
+            "Outros"});
             this.cmbSexoFunc.Location = new System.Drawing.Point(432, 173);
             this.cmbSexoFunc.Name = "cmbSexoFunc";
             this.cmbSexoFunc.Size = new System.Drawing.Size(121, 21);
@@ -198,35 +193,28 @@
             // 
             // txtCargoFunc
             // 
-            this.txtCargoFunc.Location = new System.Drawing.Point(423, 222);
+            this.txtCargoFunc.Location = new System.Drawing.Point(588, 222);
             this.txtCargoFunc.Name = "txtCargoFunc";
             this.txtCargoFunc.Size = new System.Drawing.Size(130, 20);
             this.txtCargoFunc.TabIndex = 21;
             // 
-            // txtTelefoneFunc
-            // 
-            this.txtTelefoneFunc.Location = new System.Drawing.Point(577, 222);
-            this.txtTelefoneFunc.Name = "txtTelefoneFunc";
-            this.txtTelefoneFunc.Size = new System.Drawing.Size(143, 20);
-            this.txtTelefoneFunc.TabIndex = 22;
-            // 
             // txtEmailFunc
             // 
-            this.txtEmailFunc.Location = new System.Drawing.Point(65, 273);
+            this.txtEmailFunc.Location = new System.Drawing.Point(68, 274);
             this.txtEmailFunc.Name = "txtEmailFunc";
-            this.txtEmailFunc.Size = new System.Drawing.Size(172, 20);
+            this.txtEmailFunc.Size = new System.Drawing.Size(166, 20);
             this.txtEmailFunc.TabIndex = 23;
             // 
             // txtNomeUsuarioFunc
             // 
-            this.txtNomeUsuarioFunc.Location = new System.Drawing.Point(245, 273);
+            this.txtNomeUsuarioFunc.Location = new System.Drawing.Point(255, 274);
             this.txtNomeUsuarioFunc.Name = "txtNomeUsuarioFunc";
-            this.txtNomeUsuarioFunc.Size = new System.Drawing.Size(168, 20);
+            this.txtNomeUsuarioFunc.Size = new System.Drawing.Size(139, 20);
             this.txtNomeUsuarioFunc.TabIndex = 24;
             // 
             // txtSenhaFunc
             // 
-            this.txtSenhaFunc.Location = new System.Drawing.Point(436, 273);
+            this.txtSenhaFunc.Location = new System.Drawing.Point(417, 274);
             this.txtSenhaFunc.Name = "txtSenhaFunc";
             this.txtSenhaFunc.Size = new System.Drawing.Size(145, 20);
             this.txtSenhaFunc.TabIndex = 25;
@@ -258,6 +246,7 @@
             this.btnCadastrarFunc.TabIndex = 26;
             this.btnCadastrarFunc.Text = "Cadastrar";
             this.btnCadastrarFunc.UseVisualStyleBackColor = true;
+            this.btnCadastrarFunc.Click += new System.EventHandler(this.btnCadastrarFunc_Click);
             // 
             // pictureBox1
             // 
@@ -286,11 +275,29 @@
             this.label12.TabIndex = 29;
             this.label12.Text = "ID funcionario";
             // 
+            // dtpCadastroFunc
+            // 
+            this.dtpCadastroFunc.Location = new System.Drawing.Point(423, 222);
+            this.dtpCadastroFunc.Name = "dtpCadastroFunc";
+            this.dtpCadastroFunc.Size = new System.Drawing.Size(132, 20);
+            this.dtpCadastroFunc.TabIndex = 30;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(423, 206);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(90, 13);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Data de Cadastro";
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.dtpCadastroFunc);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtIdFuncionario);
             this.Controls.Add(this.btnCancelarCadastroFunc);
@@ -298,7 +305,6 @@
             this.Controls.Add(this.txtSenhaFunc);
             this.Controls.Add(this.txtNomeUsuarioFunc);
             this.Controls.Add(this.txtEmailFunc);
-            this.Controls.Add(this.txtTelefoneFunc);
             this.Controls.Add(this.txtCargoFunc);
             this.Controls.Add(this.dtpDataNascimentoFunc);
             this.Controls.Add(this.cmbSexoFunc);
@@ -308,7 +314,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -335,7 +340,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -345,7 +349,6 @@
         private System.Windows.Forms.ComboBox cmbSexoFunc;
         private System.Windows.Forms.DateTimePicker dtpDataNascimentoFunc;
         private System.Windows.Forms.TextBox txtCargoFunc;
-        private System.Windows.Forms.TextBox txtTelefoneFunc;
         private System.Windows.Forms.TextBox txtEmailFunc;
         private System.Windows.Forms.TextBox txtNomeUsuarioFunc;
         private System.Windows.Forms.TextBox txtSenhaFunc;
@@ -353,5 +356,7 @@
         private System.Windows.Forms.Button btnCancelarCadastroFunc;
         private System.Windows.Forms.TextBox txtIdFuncionario;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker dtpCadastroFunc;
+        private System.Windows.Forms.Label label13;
     }
 }

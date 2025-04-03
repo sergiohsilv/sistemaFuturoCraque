@@ -64,7 +64,7 @@ namespace sistemaFuturoCraque
         {
             using (SqlConnection conn = new SqlConnection(conexao.IniciarCon))
             {
-                string query = "Select idUsuario FROM usuarios WHERE nomeUsuario = @usuario AND senhaUsuario = @senha";
+                string query = "Select idFunc FROM funcionario WHERE usuarioFunc = @usuario AND senhaFunc = @senha";
                 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {

@@ -41,12 +41,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtEquipamento = new System.Windows.Forms.TextBox();
             this.btnCancelarReserva = new System.Windows.Forms.Button();
             this.btnCadastrarReserva = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtIdReserva = new System.Windows.Forms.TextBox();
+            this.cmbEquipamento = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,13 +164,6 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "Funcionário";
             // 
-            // txtEquipamento
-            // 
-            this.txtEquipamento.Location = new System.Drawing.Point(323, 247);
-            this.txtEquipamento.Name = "txtEquipamento";
-            this.txtEquipamento.Size = new System.Drawing.Size(199, 20);
-            this.txtEquipamento.TabIndex = 24;
-            // 
             // btnCancelarReserva
             // 
             this.btnCancelarReserva.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelarReserva.BackgroundImage")));
@@ -198,6 +191,7 @@
             this.btnCadastrarReserva.TabIndex = 22;
             this.btnCadastrarReserva.Text = "Cadastrar";
             this.btnCadastrarReserva.UseVisualStyleBackColor = true;
+            this.btnCadastrarReserva.Click += new System.EventHandler(this.btnCadastrarReserva_Click);
             // 
             // pictureBox1
             // 
@@ -227,14 +221,22 @@
             this.txtIdReserva.Size = new System.Drawing.Size(174, 20);
             this.txtIdReserva.TabIndex = 26;
             // 
+            // cmbEquipamento
+            // 
+            this.cmbEquipamento.FormattingEnabled = true;
+            this.cmbEquipamento.Location = new System.Drawing.Point(325, 243);
+            this.cmbEquipamento.Name = "cmbEquipamento";
+            this.cmbEquipamento.Size = new System.Drawing.Size(181, 21);
+            this.cmbEquipamento.TabIndex = 27;
+            // 
             // frmCadastrarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbEquipamento);
             this.Controls.Add(this.txtIdReserva);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtEquipamento);
             this.Controls.Add(this.btnCancelarReserva);
             this.Controls.Add(this.btnCadastrarReserva);
             this.Controls.Add(this.label7);
@@ -275,8 +277,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnCadastrarReserva;
         private System.Windows.Forms.Button btnCancelarReserva;
-        private System.Windows.Forms.TextBox txtEquipamento;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtIdReserva;
+        private System.Windows.Forms.ComboBox cmbEquipamento;
     }
 }

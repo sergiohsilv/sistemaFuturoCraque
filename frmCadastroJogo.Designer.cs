@@ -198,6 +198,7 @@
             this.btnCadastrarJogo.TabIndex = 19;
             this.btnCadastrarJogo.Text = "Cadastrar";
             this.btnCadastrarJogo.UseVisualStyleBackColor = true;
+            this.btnCadastrarJogo.Click += new System.EventHandler(this.btnCadastrarJogo_Click_1);
             // 
             // pictureBox1
             // 

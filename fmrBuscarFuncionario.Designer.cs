@@ -58,7 +58,7 @@
             // 
             this.dgvBuscarFuncionario.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvBuscarFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBuscarFuncionario.Location = new System.Drawing.Point(99, 150);
+            this.dgvBuscarFuncionario.Location = new System.Drawing.Point(99, 140);
             this.dgvBuscarFuncionario.Name = "dgvBuscarFuncionario";
             this.dgvBuscarFuncionario.Size = new System.Drawing.Size(590, 220);
             this.dgvBuscarFuncionario.TabIndex = 5;

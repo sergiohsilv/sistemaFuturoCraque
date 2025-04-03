@@ -31,22 +31,23 @@ namespace sistemaFuturoCraque
                 using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
                 {
                     cn.Open();
-                    var SqlQuery = "Select*from funcionario where idFunc like '%" + txtBuscarFunc + "%'" +
-                        "OR nomeFunc like '%" + txtBuscarFunc + "%'" +
-                        "OR rgFunc like '%" + txtBuscarFunc + "%'" +
-                        "OR cpfFunc like '%" + txtBuscarFunc + "%'" +
-                        "OR emailFunc like '%" + txtBuscarFunc + "%'" +
-                        "OR cargoFunc like '%" + txtBuscarFunc + "%'" +
-                        "OR usuarioFunc like '%" + txtBuscarFunc + "%'";
-                    using (SqlDataAdapter da = new SqlDataAdapter(SqlQuery, cn))
+                    var sqlQuery = "SELECT * FROM funcionario WHERE idFunc LIKE @idFunc OR nomeFunc LIKE @nomeFunc OR cargoFunc like @cargoFunc";
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, cn))
                     {
-                        using (DataTable dt = new DataTable())
+                        cmd.Parameters.AddWithValue("@idFunc", "%" + txtBuscarFunc.Text + "%");
+                        cmd.Parameters.AddWithValue("@nomeFunc", "%" + txtBuscarFunc.Text + "%");
+                        cmd.Parameters.AddWithValue("@cargoFunc", "%" + txtBuscarFunc.Text + "%");
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            da.Fill(dt);
+                            DataTable dt = new DataTable();
+                            dt.Load(reader);
                             dgvBuscarFuncionario.DataSource = dt;
+
                         }
                     }
-
                 }
             }
             catch (Exception ex)

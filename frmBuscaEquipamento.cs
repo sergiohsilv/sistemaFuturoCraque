@@ -31,24 +31,28 @@ namespace sistemaFuturoCraque
                 using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
                 {
                     cn.Open();
-                    var SqlQuery = "Select*from equipamento where idEquipamento like '%" + txtBuscaEquipamento + "%'" +
-                        "OR itemEquipamento like '%" + txtBuscaEquipamento + "%'" +
-                        "OR fornEquipamento like '%" + txtBuscaEquipamento + "%'" +
-                        "OR telEquipamento like '%" + txtBuscaEquipamento + "%'";
-                    using (SqlDataAdapter da = new SqlDataAdapter(SqlQuery, cn))
+                    var sqlQuery = "SELECT * FROM equipamento WHERE idEquipamento LIKE @idEquipamento OR itemEquipamento LIKE @item OR fornEquipamento like @forn";
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, cn))
                     {
-                        using (DataTable dt = new DataTable())
+                        cmd.Parameters.AddWithValue("@idEquipamento", "%" + txtBuscaEquipamento.Text);
+                        cmd.Parameters.AddWithValue("@item", "%" + txtBuscaEquipamento.Text);
+                        cmd.Parameters.AddWithValue("@forn", "%" + txtBuscaEquipamento.Text);
+
+                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            da.Fill(dt);
+                            DataTable dt = new DataTable();
+                            dt.Load(reader);
                             dgvBuscarEquipamento.DataSource = dt;
+
                         }
                     }
-
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Falha na busca\n\n" + ex.Message);
+                MessageBox.Show("Falha na Busca de dados\n\n" + ex.Message);
             }
         }
 
