@@ -20,8 +20,9 @@ namespace sistemaFuturoCraque
 
         private void btnCadastarFunc_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmCadastroFuncionario frm = new frmCadastroFuncionario();
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void btnBuscarFunc_Click(object sender, EventArgs e)
@@ -61,6 +62,11 @@ namespace sistemaFuturoCraque
             this.Hide();
             frmTelaInicial frm = new frmTelaInicial();
             frm.Show();
+        }
+
+        private void btnEditarFunc_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

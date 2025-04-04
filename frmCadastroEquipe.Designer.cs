@@ -39,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelarCadastroEquipe = new System.Windows.Forms.Button();
             this.btnCadastrarEquipe = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,6 +132,7 @@
             this.btnCancelarCadastroEquipe.TabIndex = 4;
             this.btnCancelarCadastroEquipe.Text = "Cancelar";
             this.btnCancelarCadastroEquipe.UseVisualStyleBackColor = true;
+            this.btnCancelarCadastroEquipe.Click += new System.EventHandler(this.btnCancelarCadastroEquipe_Click);
             // 
             // btnCadastrarEquipe
             // 
@@ -147,11 +149,26 @@
             this.btnCadastrarEquipe.UseVisualStyleBackColor = true;
             this.btnCadastrarEquipe.Click += new System.EventHandler(this.btnCadastrarEquipe_Click);
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.Firebrick;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSair.Location = new System.Drawing.Point(13, 55);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 20;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmCadastroEquipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.txtIdEquipe);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -181,5 +198,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIdEquipe;
+        private System.Windows.Forms.Button btnSair;
     }
 }

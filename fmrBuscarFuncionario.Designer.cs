@@ -112,6 +112,7 @@
             this.btnEditarFunc.TabIndex = 10;
             this.btnEditarFunc.Text = "Editar";
             this.btnEditarFunc.UseVisualStyleBackColor = false;
+            this.btnEditarFunc.Click += new System.EventHandler(this.btnEditarFunc_Click);
             // 
             // btnCadastarFunc
             // 

@@ -94,7 +94,7 @@
             this.btnCadastrarReserva.TabIndex = 13;
             this.btnCadastrarReserva.Text = "+ Cadastrar";
             this.btnCadastrarReserva.UseVisualStyleBackColor = true;
-            this.btnCadastrarReserva.Click += new System.EventHandler(this.btnCadastrarReserva_Click);
+            this.btnCadastrarReserva.Click += new System.EventHandler(this.btnCadastrarReserva_Click_1);
             // 
             // btnBuscarReserva
             // 
@@ -122,6 +122,7 @@
             this.btnEditarReserva.TabIndex = 15;
             this.btnEditarReserva.Text = "Editar";
             this.btnEditarReserva.UseVisualStyleBackColor = false;
+            this.btnEditarReserva.Click += new System.EventHandler(this.btnEditarReserva_Click);
             // 
             // btnExcluirReserva
             // 

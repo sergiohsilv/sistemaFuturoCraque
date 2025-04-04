@@ -20,8 +20,9 @@ namespace sistemaFuturoCraque
 
         private void btnCadastrarEquipamento_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmCadastroEquipamento frm = new frmCadastroEquipamento();
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void btnBuscarEquipamento_Click(object sender, EventArgs e)

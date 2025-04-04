@@ -55,6 +55,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.dtpCadastroFunc = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -232,6 +233,7 @@
             this.btnCancelarCadastroFunc.TabIndex = 27;
             this.btnCancelarCadastroFunc.Text = "Cancelar";
             this.btnCancelarCadastroFunc.UseVisualStyleBackColor = true;
+            this.btnCancelarCadastroFunc.Click += new System.EventHandler(this.btnCancelarCadastroFunc_Click);
             // 
             // btnCadastrarFunc
             // 
@@ -291,11 +293,26 @@
             this.label13.TabIndex = 31;
             this.label13.Text = "Data de Cadastro";
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.Firebrick;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSair.Location = new System.Drawing.Point(13, 56);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 32;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dtpCadastroFunc);
             this.Controls.Add(this.label12);
@@ -358,5 +375,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dtpCadastroFunc;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnSair;
     }
 }

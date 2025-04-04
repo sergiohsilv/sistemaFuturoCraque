@@ -20,8 +20,9 @@ namespace sistemaFuturoCraque
 
         private void btnCadastrarAluno_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmCadastroAluno frm = new frmCadastroAluno();
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void btnBuscarAluno_Click(object sender, EventArgs e)

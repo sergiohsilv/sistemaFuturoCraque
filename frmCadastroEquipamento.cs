@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static sistemaFuturoCraque.frmCadastroAluno;
 
 namespace sistemaFuturoCraque
 {
@@ -45,6 +46,19 @@ namespace sistemaFuturoCraque
             {
                 MessageBox.Show("Dados não Salvos.\n\n" + ex.Message);
             }
+        }
+
+        private void LimparDisplay(object sender, EventArgs e)
+        {
+            FormUtils.LimparCampos(this);
+
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmBuscaEquipamento frm = new frmBuscaEquipamento();
+            frm.Show();
         }
     }
 }

@@ -18,11 +18,6 @@ namespace sistemaFuturoCraque
             InitializeComponent();
         }
 
-        private void btnCadastrarReserva_Click(object sender, EventArgs e)
-        {
-            frmCadastrarReserva frm = new frmCadastrarReserva();
-            frm.ShowDialog();
-        }
 
         private void btnBuscarReserva_Click(object sender, EventArgs e)
         {
@@ -75,6 +70,18 @@ catch (Exception ex)
             this.Hide();
             frmTelaInicial frm = new frmTelaInicial();
             frm.Show();
+        }
+
+        private void btnCadastrarReserva_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmCadastrarReserva frm = new frmCadastrarReserva();
+            frm.Show();
+        }
+
+        private void btnEditarReserva_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

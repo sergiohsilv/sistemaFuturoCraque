@@ -47,6 +47,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtIdJogo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,6 +185,7 @@
             this.btnCancelarCadastroJogo.TabIndex = 20;
             this.btnCancelarCadastroJogo.Text = "Cancelar";
             this.btnCancelarCadastroJogo.UseVisualStyleBackColor = true;
+            this.btnCancelarCadastroJogo.Click += new System.EventHandler(this.btnCancelarCadastroJogo_Click);
             // 
             // btnCadastrarJogo
             // 
@@ -228,12 +230,27 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "ID Jogo";
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.Firebrick;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSair.Location = new System.Drawing.Point(13, 56);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 23;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmCadastroJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtIdJogo);
             this.Controls.Add(this.btnCancelarCadastroJogo);
@@ -280,5 +297,6 @@
         private System.Windows.Forms.Button btnCancelarCadastroJogo;
         private System.Windows.Forms.TextBox txtIdJogo;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnSair;
     }
 }

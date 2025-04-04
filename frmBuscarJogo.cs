@@ -20,8 +20,9 @@ namespace sistemaFuturoCraque
 
         private void btnCadastrarJogo_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmCadastroJogo frm = new frmCadastroJogo();
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void btnBuscarJogo_Click(object sender, EventArgs e)

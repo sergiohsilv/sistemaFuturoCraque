@@ -8,12 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static sistemaFuturoCraque.frmCadastroAluno;
 
 namespace sistemaFuturoCraque
 {
     public partial class frmCadastroEquipe : Form
     {
         public frmCadastroEquipe()
+        {
+        }
+
+        public frmCadastroEquipe(int idEquipe)
         {
             InitializeComponent();
         }
@@ -43,6 +48,18 @@ namespace sistemaFuturoCraque
             {
                 MessageBox.Show("Dados não Salvos.\n\n" + ex.Message);
             }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmBuscaEquipe frm = new frmBuscaEquipe();
+            frm.Show();
+        }
+
+        private void btnCancelarCadastroEquipe_Click(object sender, EventArgs e)
+        {
+            FormUtils.LimparCampos(this);
         }
     }
 }

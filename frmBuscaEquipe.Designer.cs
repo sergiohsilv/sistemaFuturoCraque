@@ -127,6 +127,7 @@
             this.btnEditarEquipe.TabIndex = 20;
             this.btnEditarEquipe.Text = "Editar";
             this.btnEditarEquipe.UseVisualStyleBackColor = false;
+            this.btnEditarEquipe.Click += new System.EventHandler(this.btnEditarEquipe_Click);
             // 
             // txtBuscarEquipe
             // 

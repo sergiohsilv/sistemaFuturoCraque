@@ -73,6 +73,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.txtCpfResp = new System.Windows.Forms.TextBox();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -409,6 +410,7 @@
             this.btnCancelarCadastroAluno.TabIndex = 43;
             this.btnCancelarCadastroAluno.Text = "Cancelar";
             this.btnCancelarCadastroAluno.UseVisualStyleBackColor = false;
+            this.btnCancelarCadastroAluno.Click += new System.EventHandler(this.btnCancelarCadastroAluno_Click);
             // 
             // btnCadastarAluno
             // 
@@ -460,11 +462,26 @@
             this.txtCpfResp.Size = new System.Drawing.Size(129, 20);
             this.txtCpfResp.TabIndex = 49;
             // 
+            // btnSair
+            // 
+            this.btnSair.BackColor = System.Drawing.Color.Firebrick;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSair.Location = new System.Drawing.Point(13, 55);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 50;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmCadastroAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.txtCpfResp);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
@@ -563,5 +580,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtCpfResp;
+        private System.Windows.Forms.Button btnSair;
     }
 }

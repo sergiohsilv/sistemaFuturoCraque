@@ -18,6 +18,8 @@ namespace sistemaFuturoCraque
             InitializeComponent();
         }
 
+        bool menuExpand = false;
+
         private void btnCadastroAluno_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -69,8 +71,48 @@ namespace sistemaFuturoCraque
 
         private void btnRelatorio_Click(object sender, EventArgs e)
         {
+            menuTransition.Start();
+        }
+
+        private void frmTelaInicial_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuTransition_Tick(object sender, EventArgs e)
+        {
+            if (menuExpand == false)
+            {
+                menuContainer.Height = 182;
+                if (menuContainer.Height >= 182)
+                {
+                    menuTransition.Stop();
+                    menuExpand = true;
+                }
+            }
+            else
+            {
+                menuContainer.Height = 23;
+                if (menuContainer.Height <= 23)
+                {
+                    menuTransition.Stop();
+                    menuExpand = false;
+                }
+            }
+
+        }
+
+        private void btnRelAluno_Click(object sender, EventArgs e)
+        {
+            this.Hide();
             frmRelAluno frm = new frmRelAluno();
-            frm.ShowDialog();
+            frm.Show();
+
+        }
+
+        private void menuContainer_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCadastroAluno = new System.Windows.Forms.Button();
@@ -41,9 +42,17 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnRelAluno = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.menuTransition = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -75,10 +84,10 @@
             this.btnCadastroAluno.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnCadastroAluno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastroAluno.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastroAluno.Location = new System.Drawing.Point(12, 164);
+            this.btnCadastroAluno.Location = new System.Drawing.Point(12, 129);
             this.btnCadastroAluno.Name = "btnCadastroAluno";
             this.btnCadastroAluno.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnCadastroAluno.Size = new System.Drawing.Size(120, 23);
+            this.btnCadastroAluno.Size = new System.Drawing.Size(124, 23);
             this.btnCadastroAluno.TabIndex = 4;
             this.btnCadastroAluno.Text = "Alunos";
             this.btnCadastroAluno.UseVisualStyleBackColor = false;
@@ -89,9 +98,9 @@
             this.btnFuncionario.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFuncionario.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnFuncionario.Location = new System.Drawing.Point(12, 198);
+            this.btnFuncionario.Location = new System.Drawing.Point(12, 163);
             this.btnFuncionario.Name = "btnFuncionario";
-            this.btnFuncionario.Size = new System.Drawing.Size(120, 23);
+            this.btnFuncionario.Size = new System.Drawing.Size(124, 23);
             this.btnFuncionario.TabIndex = 6;
             this.btnFuncionario.Text = "Funcionários";
             this.btnFuncionario.UseVisualStyleBackColor = false;
@@ -102,9 +111,9 @@
             this.btnEquipes.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnEquipes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEquipes.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEquipes.Location = new System.Drawing.Point(12, 232);
+            this.btnEquipes.Location = new System.Drawing.Point(12, 197);
             this.btnEquipes.Name = "btnEquipes";
-            this.btnEquipes.Size = new System.Drawing.Size(120, 23);
+            this.btnEquipes.Size = new System.Drawing.Size(124, 23);
             this.btnEquipes.TabIndex = 7;
             this.btnEquipes.Text = "Equipes";
             this.btnEquipes.UseVisualStyleBackColor = false;
@@ -115,9 +124,9 @@
             this.btnJogos.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnJogos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnJogos.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnJogos.Location = new System.Drawing.Point(12, 264);
+            this.btnJogos.Location = new System.Drawing.Point(12, 229);
             this.btnJogos.Name = "btnJogos";
-            this.btnJogos.Size = new System.Drawing.Size(120, 23);
+            this.btnJogos.Size = new System.Drawing.Size(124, 23);
             this.btnJogos.TabIndex = 8;
             this.btnJogos.Text = "Jogos";
             this.btnJogos.UseVisualStyleBackColor = false;
@@ -128,9 +137,9 @@
             this.btnCadastroEquipamentos.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnCadastroEquipamentos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCadastroEquipamentos.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastroEquipamentos.Location = new System.Drawing.Point(12, 296);
+            this.btnCadastroEquipamentos.Location = new System.Drawing.Point(12, 261);
             this.btnCadastroEquipamentos.Name = "btnCadastroEquipamentos";
-            this.btnCadastroEquipamentos.Size = new System.Drawing.Size(120, 23);
+            this.btnCadastroEquipamentos.Size = new System.Drawing.Size(124, 23);
             this.btnCadastroEquipamentos.TabIndex = 9;
             this.btnCadastroEquipamentos.Text = "Equipamentos";
             this.btnCadastroEquipamentos.UseVisualStyleBackColor = false;
@@ -141,9 +150,9 @@
             this.btnReserva.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnReserva.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReserva.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnReserva.Location = new System.Drawing.Point(14, 330);
+            this.btnReserva.Location = new System.Drawing.Point(14, 292);
             this.btnReserva.Name = "btnReserva";
-            this.btnReserva.Size = new System.Drawing.Size(118, 23);
+            this.btnReserva.Size = new System.Drawing.Size(124, 23);
             this.btnReserva.TabIndex = 10;
             this.btnReserva.Text = "Reserva";
             this.btnReserva.UseVisualStyleBackColor = false;
@@ -154,9 +163,9 @@
             this.btnRelatorio.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRelatorio.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnRelatorio.Location = new System.Drawing.Point(14, 367);
+            this.btnRelatorio.Location = new System.Drawing.Point(3, 3);
             this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(118, 23);
+            this.btnRelatorio.Size = new System.Drawing.Size(124, 23);
             this.btnRelatorio.TabIndex = 11;
             this.btnRelatorio.Text = "Relatório";
             this.btnRelatorio.UseVisualStyleBackColor = false;
@@ -205,13 +214,98 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // menuContainer
+            // 
+            this.menuContainer.BackColor = System.Drawing.Color.Black;
+            this.menuContainer.Controls.Add(this.btnRelatorio);
+            this.menuContainer.Controls.Add(this.btnRelAluno);
+            this.menuContainer.Controls.Add(this.button2);
+            this.menuContainer.Controls.Add(this.button3);
+            this.menuContainer.Controls.Add(this.button4);
+            this.menuContainer.Controls.Add(this.button5);
+            this.menuContainer.Location = new System.Drawing.Point(11, 323);
+            this.menuContainer.Name = "menuContainer";
+            this.menuContainer.Size = new System.Drawing.Size(127, 23);
+            this.menuContainer.TabIndex = 13;
+            this.menuContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.menuContainer_Paint);
+            // 
+            // btnRelAluno
+            // 
+            this.btnRelAluno.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnRelAluno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRelAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelAluno.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnRelAluno.Location = new System.Drawing.Point(3, 32);
+            this.btnRelAluno.Name = "btnRelAluno";
+            this.btnRelAluno.Size = new System.Drawing.Size(124, 23);
+            this.btnRelAluno.TabIndex = 14;
+            this.btnRelAluno.Text = "Relatorio Aluno";
+            this.btnRelAluno.UseVisualStyleBackColor = false;
+            this.btnRelAluno.Click += new System.EventHandler(this.btnRelAluno_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Window;
+            this.button2.Location = new System.Drawing.Point(3, 61);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 23);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Relaorio Equipamento";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Window;
+            this.button3.Location = new System.Drawing.Point(3, 90);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(124, 23);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Relatorio Equipe";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.Window;
+            this.button4.Location = new System.Drawing.Point(3, 119);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(124, 23);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "Relatorio Funcionario";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.Window;
+            this.button5.Location = new System.Drawing.Point(3, 148);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(124, 23);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "Relatorio Reserva";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // menuTransition
+            // 
+            this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
+            // 
             // frmTelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 530);
+            this.Controls.Add(this.menuContainer);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.btnReserva);
             this.Controls.Add(this.btnCadastroEquipamentos);
             this.Controls.Add(this.btnJogos);
@@ -226,9 +320,11 @@
             this.Name = "frmTelaInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTelaInicial";
+            this.Load += new System.EventHandler(this.frmTelaInicial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuContainer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +345,12 @@
         private System.Windows.Forms.Button btnReserva;
         private System.Windows.Forms.Button btnRelatorio;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.FlowLayoutPanel menuContainer;
+        private System.Windows.Forms.Button btnRelAluno;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Timer menuTransition;
     }
 }

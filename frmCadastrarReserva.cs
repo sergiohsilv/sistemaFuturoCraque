@@ -8,11 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static sistemaFuturoCraque.frmCadastroAluno;
 
 namespace sistemaFuturoCraque
 {
     public partial class frmCadastrarReserva : Form
     {
+
+        int idReserva = 0;
+
         public class ComboboxItem
         {
             public string Text { get; set; }
@@ -32,6 +36,49 @@ namespace sistemaFuturoCraque
             CarregarEquipe();
             CarregarFunc();
             CarregarEquipamento();
+        }
+
+        public frmCadastrarReserva(int idReserva)
+        {
+            this.idReserva = idReserva;
+
+            if (this.idReserva > 0)
+                GetReserva(idReserva);
+        }
+
+
+        private void GetReserva(int idReserva)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                {
+                    cn.Open();
+                    var sql = "select * from reserva where idReserva=" + idReserva;
+                    using (SqlCommand cmd = new SqlCommand(sql, cn))
+                    {
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            if (dr.HasRows)
+                            {
+                                if (dr.Read())
+                                {
+                                    dtpReserva.Text = dr["dtReserva"].ToString();
+                                    dtpDevolucao.Text = dr["dtDevolucao"].ToString();
+                                    txtQuantidadeEquipamento.Text = dr["qtdEquipamento"].ToString();
+                                    cmbEquipe.Text = dr["idEquipe"].ToString();
+                                    cmbEquipamento.Text = dr["idEquipamento"].ToString();
+                                    cmbFuncionario.Text = dr["idFunc"].ToString();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Dados não Atualizados . \n\n" + ex.Message);
+            }
         }
 
         private void CarregarEquipe()
@@ -79,7 +126,7 @@ namespace sistemaFuturoCraque
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    cmbEquipe.Items.Add(new ComboboxItem
+                    cmbEquipamento.Items.Add(new ComboboxItem
                     {
                         Text = reader["itemEquipamento"].ToString(),
                         Value = reader["idEquipamento"]
@@ -104,7 +151,11 @@ namespace sistemaFuturoCraque
                 {
 
                     cn.Open();
-                    var sql = "Insert into reserva (dtReserva , dtDevolucao, qtdEquipamento, idEquipe, idEquipamento, idFunc) VALUES (@dtReserva, @dtDevolucao,@qtdEquipamento, @idEquipe, @idItem, @idFunc)";
+                    var sql = "";
+                    if (this.idReserva == 0)
+                        sql = "Insert into reserva (dtReserva , dtDevolucao, qtdEquipamento, idEquipe, idEquipamento, idFunc) VALUES (@dtReserva, @dtDevolucao,@qtdEquipamento, @idEquipe, @idItem, @idFunc)";
+                    else
+                        sql = "update reserva set dtReserva = @dtReserva, dtDevolucao = @dtDevolucao, qtdEquipamento = @qtdEquipamento , idEquipe = @idEquipe, idEquipamento = @idItem, idFunc = @idFunc where idReserva =" + this.idReserva;
                     using (SqlCommand cmd = new SqlCommand(sql, cn))
                     {
                         cmd.Parameters.AddWithValue("@dtReserva", dtReserva);
@@ -125,6 +176,18 @@ namespace sistemaFuturoCraque
                 MessageBox.Show("Dados não Salvos.\n\n" + ex.Message);
             }
 
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmBuscaEquipamento frm = new frmBuscaEquipamento();
+            frm.Show();
+        }
+
+        private void LimparDisplay(object sender, EventArgs e)
+        {
+            FormUtils.LimparCampos(this);
         }
     }
 }
