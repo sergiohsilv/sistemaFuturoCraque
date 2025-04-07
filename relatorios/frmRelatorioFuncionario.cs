@@ -10,16 +10,17 @@ using System.Windows.Forms;
 
 namespace sistemaFuturoCraque
 {
-    public partial class frmRelatorioReserva : Form
+    public partial class frmRelatorioFuncionario : Form
     {
-        public frmRelatorioReserva()
+        public frmRelatorioFuncionario()
         {
             InitializeComponent();
         }
 
-        private void frmRelatorioReserva_Load(object sender, EventArgs e)
+        private void frmRelatorioFuncionario_Load(object sender, EventArgs e)
         {
 
+            this.reportViewer1.RefreshReport();
         }
     }
 }

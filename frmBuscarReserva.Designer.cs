@@ -38,8 +38,10 @@
             this.btnEditarReserva = new System.Windows.Forms.Button();
             this.btnExcluirReserva = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscaReserva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -151,6 +153,16 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::sistemaFuturoCraque.Properties.Resources.Futuro_Craque_removebg_preview;
+            this.pictureBox2.Location = new System.Drawing.Point(215, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(371, 174);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 18;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmBuscarReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,11 +177,13 @@
             this.Controls.Add(this.dgvBuscaReserva);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "frmBuscarReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscarReserva";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscaReserva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +200,6 @@
         private System.Windows.Forms.Button btnEditarReserva;
         private System.Windows.Forms.Button btnExcluirReserva;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

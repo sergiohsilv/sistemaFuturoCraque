@@ -14,11 +14,9 @@ namespace sistemaFuturoCraque
 {
     public partial class frmCadastroEquipe : Form
     {
-        public frmCadastroEquipe()
-        {
-        }
 
-        public frmCadastroEquipe(int idEquipe)
+
+        public frmCadastroEquipe()
         {
             InitializeComponent();
         }

@@ -38,8 +38,10 @@
             this.btnCadastarFunc = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSair = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -153,6 +155,16 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::sistemaFuturoCraque.Properties.Resources.Futuro_Craque_removebg_preview;
+            this.pictureBox2.Location = new System.Drawing.Point(215, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(371, 174);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
             // fmrBuscarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,11 +179,13 @@
             this.Controls.Add(this.dgvBuscarFuncionario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "fmrBuscarFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmrBuscarFuncionario";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarFuncionario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +202,6 @@
         private System.Windows.Forms.Button btnExcluirFunc;
         private System.Windows.Forms.Button btnEditarFunc;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

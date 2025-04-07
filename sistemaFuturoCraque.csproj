@@ -144,28 +144,28 @@
     <Compile Include="frmCadastroJogo.Designer.cs">
       <DependentUpon>frmCadastroJogo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRelatorioEquipamento.cs">
+    <Compile Include="relatorios\frmRelatorioEquipamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRelatorioEquipamento.Designer.cs">
+    <Compile Include="relatorios\frmRelatorioEquipamento.Designer.cs">
       <DependentUpon>frmRelatorioEquipamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRelatorioFuncionario.cs">
+    <Compile Include="relatorios\frmRelatorioFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRelatorioFuncionario.Designer.cs">
+    <Compile Include="relatorios\frmRelatorioFuncionario.Designer.cs">
       <DependentUpon>frmRelatorioFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRelatorioJogos.cs">
+    <Compile Include="relatorios\frmRelatorioJogos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRelatorioJogos.Designer.cs">
+    <Compile Include="relatorios\frmRelatorioJogos.Designer.cs">
       <DependentUpon>frmRelatorioJogos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRelatorioReserva.cs">
+    <Compile Include="relatorios\frmRelatorioReserva.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRelatorioReserva.Designer.cs">
+    <Compile Include="relatorios\frmRelatorioReserva.Designer.cs">
       <DependentUpon>frmRelatorioReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTelaInicial.cs">
@@ -222,16 +222,16 @@
     <EmbeddedResource Include="frmCadastroJogo.resx">
       <DependentUpon>frmCadastroJogo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRelatorioEquipamento.resx">
+    <EmbeddedResource Include="relatorios\frmRelatorioEquipamento.resx">
       <DependentUpon>frmRelatorioEquipamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRelatorioFuncionario.resx">
+    <EmbeddedResource Include="relatorios\frmRelatorioFuncionario.resx">
       <DependentUpon>frmRelatorioFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRelatorioJogos.resx">
+    <EmbeddedResource Include="relatorios\frmRelatorioJogos.resx">
       <DependentUpon>frmRelatorioJogos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRelatorioReserva.resx">
+    <EmbeddedResource Include="relatorios\frmRelatorioReserva.resx">
       <DependentUpon>frmRelatorioReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTelaInicial.resx">
@@ -251,6 +251,10 @@
       <DependentUpon>frmRelAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="relatorios\relAluno.rdlc" />
+    <EmbeddedResource Include="relatorios\relEquipamento.rdlc" />
+    <EmbeddedResource Include="relatorios\relFunc.rdlc" />
+    <EmbeddedResource Include="relatorios\relJogos.rdlc" />
+    <EmbeddedResource Include="relatorios\relReserva.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -38,8 +38,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCadastrarEquipamento = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarEquipamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvBuscarEquipamento
@@ -149,6 +151,16 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::sistemaFuturoCraque.Properties.Resources.Futuro_Craque_removebg_preview;
+            this.pictureBox2.Location = new System.Drawing.Point(215, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(371, 174);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmBuscaEquipamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,11 +175,13 @@
             this.Controls.Add(this.btnCadastrarEquipamento);
             this.Controls.Add(this.txtBuscaEquipamento);
             this.Controls.Add(this.dgvBuscarEquipamento);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "frmBuscaEquipamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBuscaEquipamento";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarEquipamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,5 +198,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -29,31 +29,34 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Button btnSalvarRelJogos;
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnGerarRelJogos = new System.Windows.Forms.Button();
             this.btnImprimirRelJogos = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             btnSalvarRelJogos = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // btnSalvarRelJogos
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 118);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 281);
-            this.dataGridView1.TabIndex = 0;
+            btnSalvarRelJogos.BackColor = System.Drawing.Color.MediumBlue;
+            btnSalvarRelJogos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            btnSalvarRelJogos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnSalvarRelJogos.ForeColor = System.Drawing.SystemColors.Window;
+            btnSalvarRelJogos.Location = new System.Drawing.Point(713, 410);
+            btnSalvarRelJogos.Name = "btnSalvarRelJogos";
+            btnSalvarRelJogos.Size = new System.Drawing.Size(75, 23);
+            btnSalvarRelJogos.TabIndex = 3;
+            btnSalvarRelJogos.Text = "Salvar";
+            btnSalvarRelJogos.UseVisualStyleBackColor = false;
             // 
             // btnGerarRelJogos
             // 
             this.btnGerarRelJogos.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnGerarRelJogos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGerarRelJogos.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnGerarRelJogos.Location = new System.Drawing.Point(713, 85);
+            this.btnGerarRelJogos.Location = new System.Drawing.Point(713, 54);
             this.btnGerarRelJogos.Name = "btnGerarRelJogos";
             this.btnGerarRelJogos.Size = new System.Drawing.Size(75, 23);
             this.btnGerarRelJogos.TabIndex = 1;
@@ -72,19 +75,6 @@
             this.btnImprimirRelJogos.TabIndex = 2;
             this.btnImprimirRelJogos.Text = "Imprimir";
             this.btnImprimirRelJogos.UseVisualStyleBackColor = false;
-            // 
-            // btnSalvarRelJogos
-            // 
-            btnSalvarRelJogos.BackColor = System.Drawing.Color.MediumBlue;
-            btnSalvarRelJogos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            btnSalvarRelJogos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnSalvarRelJogos.ForeColor = System.Drawing.SystemColors.Window;
-            btnSalvarRelJogos.Location = new System.Drawing.Point(713, 410);
-            btnSalvarRelJogos.Name = "btnSalvarRelJogos";
-            btnSalvarRelJogos.Size = new System.Drawing.Size(75, 23);
-            btnSalvarRelJogos.TabIndex = 3;
-            btnSalvarRelJogos.Text = "Salvar";
-            btnSalvarRelJogos.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -108,20 +98,29 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Relatório Jogos";
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "sistemaFuturoCraque.relatorios.relJogos.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 89);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(799, 315);
+            this.reportViewer1.TabIndex = 14;
+            // 
             // frmRelatorioJogos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(btnSalvarRelJogos);
             this.Controls.Add(this.btnImprimirRelJogos);
             this.Controls.Add(this.btnGerarRelJogos);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "frmRelatorioJogos";
             this.Text = "frmRelatorioJogos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmRelatorioJogos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,11 +128,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnGerarRelJogos;
         private System.Windows.Forms.Button btnImprimirRelJogos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

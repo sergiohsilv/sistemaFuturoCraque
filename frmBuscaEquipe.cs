@@ -20,8 +20,9 @@ namespace sistemaFuturoCraque
 
         private void btnCadastrarEquipe_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmCadastroEquipe frm = new frmCadastroEquipe();
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void btnBuscarEquipe_Click(object sender, EventArgs e)
@@ -61,13 +62,6 @@ namespace sistemaFuturoCraque
             this.Hide();
             frmTelaInicial frm = new frmTelaInicial();
             frm.Show();
-        }
-
-        private void btnEditarEquipe_Click(object sender, EventArgs e)
-        {
-            var idEquipe = Convert.ToInt32(dgvBuscarEquipe.Rows[dgvBuscarEquipe.CurrentCell.RowIndex].Cells[0].Value);
-            frmCadastroEquipe frm = new frmCadastroEquipe(idEquipe);
-            frm.ShowDialog();
         }
     }
 }

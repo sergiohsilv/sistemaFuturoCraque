@@ -15,9 +15,8 @@
           <Source>Embedded</Source>
           <Value>FuturoCraque</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.3175cm</Top>
-          <Height>2.39958cm</Height>
-          <Width>2.29375cm</Width>
+          <Height>2.99571cm</Height>
+          <Width>2.66417cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -75,7 +74,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
           <Top>2.43099cm</Top>
-          <Left>12.37933cm</Left>
+          <Left>12.37932cm</Left>
           <Height>0.6cm</Height>
           <Width>4.23651cm</Width>
           <ZIndex>2</ZIndex>

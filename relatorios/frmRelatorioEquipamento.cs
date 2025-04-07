@@ -16,5 +16,11 @@ namespace sistemaFuturoCraque
         {
             InitializeComponent();
         }
+
+        private void frmRelatorioEquipamento_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

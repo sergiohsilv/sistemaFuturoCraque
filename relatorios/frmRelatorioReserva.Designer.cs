@@ -28,25 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGerarRelReserva = new System.Windows.Forms.Button();
             this.btnSalvarRelReserva = new System.Windows.Forms.Button();
             this.btnImprimirRelReserva = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 118);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 281);
-            this.dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
@@ -66,7 +55,7 @@
             this.btnGerarRelReserva.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGerarRelReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarRelReserva.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnGerarRelReserva.Location = new System.Drawing.Point(713, 85);
+            this.btnGerarRelReserva.Location = new System.Drawing.Point(713, 54);
             this.btnGerarRelReserva.Name = "btnGerarRelReserva";
             this.btnGerarRelReserva.Size = new System.Drawing.Size(75, 23);
             this.btnGerarRelReserva.TabIndex = 14;
@@ -109,21 +98,29 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "sistemaFuturoCraque.relatorios.relReserva.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 89);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(799, 315);
+            this.reportViewer1.TabIndex = 17;
+            // 
             // frmRelatorioReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnImprimirRelReserva);
             this.Controls.Add(this.btnSalvarRelReserva);
             this.Controls.Add(this.btnGerarRelReserva);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "frmRelatorioReserva";
             this.Text = "frmRelatorioReserva";
             this.Load += new System.EventHandler(this.frmRelatorioReserva_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -131,12 +128,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGerarRelReserva;
         private System.Windows.Forms.Button btnSalvarRelReserva;
         private System.Windows.Forms.Button btnImprimirRelReserva;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

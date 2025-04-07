@@ -28,24 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvRelFuncionario = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGerarRelFuncionario = new System.Windows.Forms.Button();
             this.btnSalvarRelFuncionario = new System.Windows.Forms.Button();
             this.btnImprimirRelFuncionario = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRelFuncionario)).BeginInit();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvRelFuncionario
-            // 
-            this.dgvRelFuncionario.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvRelFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRelFuncionario.Location = new System.Drawing.Point(0, 118);
-            this.dgvRelFuncionario.Name = "dgvRelFuncionario";
-            this.dgvRelFuncionario.Size = new System.Drawing.Size(800, 281);
-            this.dgvRelFuncionario.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -75,7 +65,7 @@
             this.btnGerarRelFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGerarRelFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarRelFuncionario.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnGerarRelFuncionario.Location = new System.Drawing.Point(713, 85);
+            this.btnGerarRelFuncionario.Location = new System.Drawing.Point(713, 54);
             this.btnGerarRelFuncionario.Name = "btnGerarRelFuncionario";
             this.btnGerarRelFuncionario.Size = new System.Drawing.Size(75, 23);
             this.btnGerarRelFuncionario.TabIndex = 13;
@@ -108,20 +98,29 @@
             this.btnImprimirRelFuncionario.Text = "Imprimir";
             this.btnImprimirRelFuncionario.UseVisualStyleBackColor = false;
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "sistemaFuturoCraque.relatorios.relFunc.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 89);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(799, 315);
+            this.reportViewer1.TabIndex = 16;
+            // 
             // frmRelatorioFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnImprimirRelFuncionario);
             this.Controls.Add(this.btnSalvarRelFuncionario);
             this.Controls.Add(this.btnGerarRelFuncionario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dgvRelFuncionario);
             this.Name = "frmRelatorioFuncionario";
             this.Text = "frmRelatorioFuncionario";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRelFuncionario)).EndInit();
+            this.Load += new System.EventHandler(this.frmRelatorioFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,12 +128,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvRelFuncionario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGerarRelFuncionario;
         private System.Windows.Forms.Button btnSalvarRelFuncionario;
         private System.Windows.Forms.Button btnImprimirRelFuncionario;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
