@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnGerarRelEquipamento = new System.Windows.Forms.Button();
-            this.btnSalvarRelEquipamento = new System.Windows.Forms.Button();
             this.btnImprimirRelEquipamento = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.panelRelatorio = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelRelatorio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,38 +51,13 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Relatório de Equipamento";
             // 
-            // btnGerarRelEquipamento
-            // 
-            this.btnGerarRelEquipamento.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnGerarRelEquipamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGerarRelEquipamento.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnGerarRelEquipamento.Location = new System.Drawing.Point(713, 54);
-            this.btnGerarRelEquipamento.Name = "btnGerarRelEquipamento";
-            this.btnGerarRelEquipamento.Size = new System.Drawing.Size(75, 23);
-            this.btnGerarRelEquipamento.TabIndex = 15;
-            this.btnGerarRelEquipamento.Text = "Gerar";
-            this.btnGerarRelEquipamento.UseVisualStyleBackColor = false;
-            // 
-            // btnSalvarRelEquipamento
-            // 
-            this.btnSalvarRelEquipamento.BackColor = System.Drawing.Color.MediumBlue;
-            this.btnSalvarRelEquipamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalvarRelEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvarRelEquipamento.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSalvarRelEquipamento.Location = new System.Drawing.Point(713, 410);
-            this.btnSalvarRelEquipamento.Name = "btnSalvarRelEquipamento";
-            this.btnSalvarRelEquipamento.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvarRelEquipamento.TabIndex = 16;
-            this.btnSalvarRelEquipamento.Text = "Salvar";
-            this.btnSalvarRelEquipamento.UseVisualStyleBackColor = false;
-            // 
             // btnImprimirRelEquipamento
             // 
             this.btnImprimirRelEquipamento.BackColor = System.Drawing.Color.DimGray;
             this.btnImprimirRelEquipamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImprimirRelEquipamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImprimirRelEquipamento.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnImprimirRelEquipamento.Location = new System.Drawing.Point(620, 410);
+            this.btnImprimirRelEquipamento.Location = new System.Drawing.Point(691, 319);
             this.btnImprimirRelEquipamento.Name = "btnImprimirRelEquipamento";
             this.btnImprimirRelEquipamento.Size = new System.Drawing.Size(75, 23);
             this.btnImprimirRelEquipamento.TabIndex = 17;
@@ -97,30 +74,50 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // reportViewer1
+            // panelRelatorio
             // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "sistemaFuturoCraque.relatorios.relEquipamento.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 89);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(799, 315);
-            this.reportViewer1.TabIndex = 18;
+            this.panelRelatorio.Controls.Add(this.label2);
+            this.panelRelatorio.Controls.Add(this.dataGridView1);
+            this.panelRelatorio.Controls.Add(this.btnImprimirRelEquipamento);
+            this.panelRelatorio.Location = new System.Drawing.Point(12, 73);
+            this.panelRelatorio.Name = "panelRelatorio";
+            this.panelRelatorio.Size = new System.Drawing.Size(776, 355);
+            this.panelRelatorio.TabIndex = 18;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 46);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(770, 258);
+            this.dataGridView1.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(285, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(230, 25);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Relatorio Equipamento";
             // 
             // frmRelatorioEquipamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.reportViewer1);
-            this.Controls.Add(this.btnImprimirRelEquipamento);
-            this.Controls.Add(this.btnSalvarRelEquipamento);
-            this.Controls.Add(this.btnGerarRelEquipamento);
+            this.Controls.Add(this.panelRelatorio);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmRelatorioEquipamento";
             this.Text = "frmRelatorioEquipamento";
             this.Load += new System.EventHandler(this.frmRelatorioEquipamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelRelatorio.ResumeLayout(false);
+            this.panelRelatorio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,9 +127,9 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnGerarRelEquipamento;
-        private System.Windows.Forms.Button btnSalvarRelEquipamento;
         private System.Windows.Forms.Button btnImprimirRelEquipamento;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.Panel panelRelatorio;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
     }
 }

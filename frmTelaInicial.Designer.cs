@@ -223,7 +223,7 @@
             this.menuContainer.Controls.Add(this.button3);
             this.menuContainer.Controls.Add(this.button4);
             this.menuContainer.Controls.Add(this.button5);
-            this.menuContainer.Location = new System.Drawing.Point(11, 323);
+            this.menuContainer.Location = new System.Drawing.Point(11, 320);
             this.menuContainer.Name = "menuContainer";
             this.menuContainer.Size = new System.Drawing.Size(127, 23);
             this.menuContainer.TabIndex = 13;
@@ -233,7 +233,7 @@
             // 
             this.btnRelAluno.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnRelAluno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRelAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRelAluno.ForeColor = System.Drawing.SystemColors.Window;
             this.btnRelAluno.Location = new System.Drawing.Point(3, 32);
             this.btnRelAluno.Name = "btnRelAluno";
@@ -260,7 +260,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Highlight;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Window;
             this.button3.Location = new System.Drawing.Point(3, 90);
             this.button3.Name = "button3";
@@ -286,7 +286,7 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.Highlight;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.Window;
             this.button5.Location = new System.Drawing.Point(3, 148);
             this.button5.Name = "button5";

@@ -33,6 +33,8 @@ namespace sistemaFuturoCraque
             CarregarEquipeAluno();
         }
 
+
+
         private void CarregarEquipeAluno()
         {
             using (SqlConnection cn = new SqlConnection(connectionString))

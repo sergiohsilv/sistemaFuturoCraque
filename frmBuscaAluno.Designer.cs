@@ -75,7 +75,7 @@
             // 
             // btnBuscarAluno
             // 
-            this.btnBuscarAluno.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnBuscarAluno.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnBuscarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBuscarAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarAluno.ForeColor = System.Drawing.SystemColors.Window;
@@ -100,10 +100,11 @@
             this.btnEditarAluno.TabIndex = 13;
             this.btnEditarAluno.Text = "Editar";
             this.btnEditarAluno.UseVisualStyleBackColor = false;
+           // this.btnEditarAluno.Click += new System.EventHandler(this.btnEditarAluno_Click);
             // 
             // btnExcluirAluno
             // 
-            this.btnExcluirAluno.BackColor = System.Drawing.Color.Red;
+            this.btnExcluirAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnExcluirAluno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnExcluirAluno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExcluirAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -114,6 +115,7 @@
             this.btnExcluirAluno.TabIndex = 12;
             this.btnExcluirAluno.Text = "Excluir";
             this.btnExcluirAluno.UseVisualStyleBackColor = false;
+            this.btnExcluirAluno.Click += new System.EventHandler(this.btnExcluirAluno_Click);
             // 
             // btnCadastrarAluno
             // 

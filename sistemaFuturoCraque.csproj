@@ -250,11 +250,6 @@
     <EmbeddedResource Include="relatorios\frmRelAluno.resx">
       <DependentUpon>frmRelAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="relatorios\relAluno.rdlc" />
-    <EmbeddedResource Include="relatorios\relEquipamento.rdlc" />
-    <EmbeddedResource Include="relatorios\relFunc.rdlc" />
-    <EmbeddedResource Include="relatorios\relJogos.rdlc" />
-    <EmbeddedResource Include="relatorios\relReserva.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
