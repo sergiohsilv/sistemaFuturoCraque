@@ -22,7 +22,7 @@ namespace sistemaFuturoCraque.relatorios
             documento.PrintPage += Documento_PrintPage;
         }
 
-        private void CarregarDados(DataTable dados)
+        public void CarregarDados(DataTable dados)
         {
             dgvAlunos.DataSource = dados;
         }

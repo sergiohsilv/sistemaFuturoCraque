@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCadastroAluno = new System.Windows.Forms.Button();
             this.btnFuncionario = new System.Windows.Forms.Button();
             this.btnEquipes = new System.Windows.Forms.Button();
             this.btnJogos = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
+            this.btnCadastroAluno = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,20 +78,6 @@
             this.label2.Size = new System.Drawing.Size(116, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Escola de Futebol";
-            // 
-            // btnCadastroAluno
-            // 
-            this.btnCadastroAluno.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnCadastroAluno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastroAluno.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCadastroAluno.Location = new System.Drawing.Point(12, 129);
-            this.btnCadastroAluno.Name = "btnCadastroAluno";
-            this.btnCadastroAluno.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnCadastroAluno.Size = new System.Drawing.Size(124, 23);
-            this.btnCadastroAluno.TabIndex = 4;
-            this.btnCadastroAluno.Text = "Alunos";
-            this.btnCadastroAluno.UseVisualStyleBackColor = false;
-            this.btnCadastroAluno.Click += new System.EventHandler(this.btnCadastroAluno_Click);
             // 
             // btnFuncionario
             // 
@@ -223,7 +209,7 @@
             this.menuContainer.Controls.Add(this.button3);
             this.menuContainer.Controls.Add(this.button4);
             this.menuContainer.Controls.Add(this.button5);
-            this.menuContainer.Location = new System.Drawing.Point(11, 320);
+            this.menuContainer.Location = new System.Drawing.Point(11, 321);
             this.menuContainer.Name = "menuContainer";
             this.menuContainer.Size = new System.Drawing.Size(127, 23);
             this.menuContainer.TabIndex = 13;
@@ -299,11 +285,26 @@
             // 
             this.menuTransition.Tick += new System.EventHandler(this.menuTransition_Tick);
             // 
+            // btnCadastroAluno
+            // 
+            this.btnCadastroAluno.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnCadastroAluno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastroAluno.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCadastroAluno.Location = new System.Drawing.Point(14, 134);
+            this.btnCadastroAluno.Name = "btnCadastroAluno";
+            this.btnCadastroAluno.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnCadastroAluno.Size = new System.Drawing.Size(124, 23);
+            this.btnCadastroAluno.TabIndex = 4;
+            this.btnCadastroAluno.Text = "Alunos";
+            this.btnCadastroAluno.UseVisualStyleBackColor = false;
+            this.btnCadastroAluno.Click += new System.EventHandler(this.btnCadastroAluno_Click);
+            // 
             // frmTelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 530);
+            this.Controls.Add(this.btnCadastroAluno);
             this.Controls.Add(this.menuContainer);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnReserva);
@@ -312,7 +313,6 @@
             this.Controls.Add(this.btnEquipes);
             this.Controls.Add(this.btnFuncionario);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.btnCadastroAluno);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
@@ -336,7 +336,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnCadastroAluno;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnFuncionario;
         private System.Windows.Forms.Button btnEquipes;
@@ -352,5 +351,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Timer menuTransition;
+        private System.Windows.Forms.Button btnCadastroAluno;
     }
 }

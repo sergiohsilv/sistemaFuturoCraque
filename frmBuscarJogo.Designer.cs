@@ -86,6 +86,7 @@
             this.btnEditarJogo.TabIndex = 4;
             this.btnEditarJogo.Text = "Editar";
             this.btnEditarJogo.UseVisualStyleBackColor = false;
+            this.btnEditarJogo.Click += new System.EventHandler(this.btnEditarJogo_Click);
             // 
             // btnExcluirJogo
             // 

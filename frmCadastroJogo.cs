@@ -25,7 +25,7 @@ namespace sistemaFuturoCraque
                 }
             }
             private string connectionString = conexao.IniciarCon;
-        public frmCadastroJogo()
+        public frmCadastroJogo(int idJogo)
         {
             InitializeComponent();
             CarregarEquipe();

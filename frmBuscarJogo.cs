@@ -21,7 +21,7 @@ namespace sistemaFuturoCraque
         private void btnCadastrarJogo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmCadastroJogo frm = new frmCadastroJogo();
+            frmCadastroJogo frm = new frmCadastroJogo(0);
             frm.Show();
         }
 
@@ -75,6 +75,49 @@ namespace sistemaFuturoCraque
             this.Hide();
             frmTelaInicial frm = new frmTelaInicial();
             frm.Show();
+        }
+
+        private void btnEditarJogo_Click(object sender, EventArgs e)
+        {
+            if (dgvBuscarJogo.SelectedRows.Count > 0)
+            {
+                int idJogo = Convert.ToInt32(dgvBuscarJogo.SelectedRows[0].Cells["idJogo"].Value);
+
+
+                frmCadastroJogo frm = new frmCadastroJogo(idJogo);
+                frm.ShowDialog();
+
+                BuscarNovamente();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um aluno para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void BuscarNovamente()
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                {
+                    cn.Open();
+                    var sqlQuery = "Select * from jogo Where timeadvJogo Like '%" + txtBuscarJogo.Text + "%'";
+
+                    using (SqlDataAdapter da = new SqlDataAdapter())
+                    {
+                        using (DataTable dt = new DataTable())
+                        {
+                            da.Fill(dt);
+                            dgvBuscarJogo.DataSource = dt;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar dados\n\n" + ex.Message);
+            }
         }
     }
 }

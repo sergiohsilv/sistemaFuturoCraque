@@ -12,11 +12,53 @@ using static sistemaFuturoCraque.frmCadastroAluno;
 
 namespace sistemaFuturoCraque
 {
+    
     public partial class frmCadastroEquipamento : Form
     {
-        public frmCadastroEquipamento()
+
+        int idEquipamento = 0;
+        public frmCadastroEquipamento(int idEquipamento)
         {
             InitializeComponent();
+            this.idEquipamento = idEquipamento;
+
+            if (this.idEquipamento > 0)
+                GetEquipamento(idEquipamento);
+        }
+
+        private void GetEquipamento(int idAluno)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                {
+                    cn.Open();
+                    var sql = "select * from equipamento where idEquipamento=" + idEquipamento;
+                    using (SqlCommand cmd = new SqlCommand(sql, cn))
+                    {
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            if (dr.HasRows)
+                            {
+                                if (dr.Read())
+
+                                {
+                                    txtItemEquipamento.Text = dr["itemEquipamento"].ToString();
+                                    txtQtdEquipamento.Text = dr["qtdEquipamento"].ToString();
+                                    txtFornecedorEquipamento.Text = dr["fornEquipamento"].ToString();
+                                    txtTelefoneEquipamento.Text = dr["telEquipamento"].ToString();
+                                    txtSiteEquipamento.Text = dr["siteEquipamento"].ToString();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Dados não atualizado .\n\n" + ex.Message);
+
+            }
         }
 
         private void btnCadastroEquipamento_Click(object sender, EventArgs e)
@@ -27,7 +69,11 @@ namespace sistemaFuturoCraque
                 {
 
                     cn.Open();
-                    var sql = "Insert into equipamento (itemEquipamento, qtdEquipamento, fornEquipamento, telEquipamento, siteEquipamento) VALUES (@item, @qtd, @forn, @telForn, @site)";
+                    var sql = "";
+                        if (this.idEquipamento == 0)
+                        sql = "Insert into equipamento (itemEquipamento, qtdEquipamento, fornEquipamento, telEquipamento, siteEquipamento) VALUES (@item, @qtd, @forn, @telForn, @site)";
+                    else
+                        sql = "UPDATE equipamento set itemEquipamento = @item, qtdEquipamento = @qtd, fornEquipamento = @forn, telEquipamento = @telForn, siteEquipamento = @site";
                     using (SqlCommand cmd = new SqlCommand(sql, cn))
                     {
                         cmd.Parameters.AddWithValue("@item", txtItemEquipamento.Text);

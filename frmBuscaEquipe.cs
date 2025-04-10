@@ -21,7 +21,7 @@ namespace sistemaFuturoCraque
         private void btnCadastrarEquipe_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmCadastroEquipe frm = new frmCadastroEquipe();
+            frmCadastroEquipe frm = new frmCadastroEquipe(0);
             frm.Show();
         }
 
@@ -62,6 +62,49 @@ namespace sistemaFuturoCraque
             this.Hide();
             frmTelaInicial frm = new frmTelaInicial();
             frm.Show();
+        }
+
+        private void btnEditarEquipe_Click(object sender, EventArgs e)
+        {
+            if (dgvBuscarEquipe.SelectedRows.Count > 0)
+            {
+                int idEquipe = Convert.ToInt32(dgvBuscarEquipe.SelectedRows[0].Cells["idEquipe"].Value);
+
+
+                frmCadastroEquipe frm = new frmCadastroEquipe(idEquipe);
+                frm.ShowDialog();
+
+                BuscarNovamente();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um aluno para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void BuscarNovamente()
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                {
+                    cn.Open();
+                    var sqlQuery = "Select * from equipe Where subEquipe Like '%" + txtBuscarEquipe.Text + "%'";
+
+                    using (SqlDataAdapter da = new SqlDataAdapter())
+                    {
+                        using (DataTable dt = new DataTable())
+                        {
+                            da.Fill(dt);
+                            dgvBuscarEquipe.DataSource = dt;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar dados\n\n" + ex.Message);
+            }
         }
     }
 }

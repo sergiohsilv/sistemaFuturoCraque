@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -104,13 +105,34 @@ namespace sistemaFuturoCraque
 
         private void btnRelAluno_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmRelAluno frm = new frmRelAluno();
-            frm.Show();
+            DataTable alunos = BuscarAlunos();
+            frmRelAluno relatorio = new frmRelAluno();
+            relatorio.CarregarDados(alunos);
+            relatorio.ShowDialog();
+        }
+
+        private DataTable BuscarAlunos()
+        {
+            string query = "SELECT idAluno, nomeAluno, cpfAluno FROM aluno";
+            DataTable tabela = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(conexao.IniciarCon))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+            {
+                conn.Open();
+                da.Fill(tabela);
+            }
+            return tabela;
 
         }
 
         private void menuContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void transition_Tick(object sender, EventArgs e)
         {
 
         }

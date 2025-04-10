@@ -21,7 +21,7 @@ namespace sistemaFuturoCraque
         private void btnCadastrarEquipamento_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmCadastroEquipamento frm = new frmCadastroEquipamento();
+            frmCadastroEquipamento frm = new frmCadastroEquipamento(0);
             frm.Show();
         }
 
@@ -62,6 +62,50 @@ namespace sistemaFuturoCraque
             this.Hide();
             frmTelaInicial frm = new frmTelaInicial();
             frm.Show();
+        }
+
+        private void btnEditarEquipamento_Click(object sender, EventArgs e)
+        {
+            if (dgvBuscarEquipamento.SelectedRows.Count > 0)
+            {
+                int idEquipamento = Convert.ToInt32(dgvBuscarEquipamento.SelectedRows[0].Cells["idEquipamento"].Value);
+
+
+                frmCadastroEquipamento frm = new frmCadastroEquipamento(idEquipamento);
+                frm.ShowDialog();
+
+                BuscarNovamente();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um aluno para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void BuscarNovamente()
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                {
+                    cn.Open();
+                    var sqlQuery = "Select * from aluno Where nomeAluno Like '%" + txtBuscaEquipamento.Text + "%'";
+
+                    using (SqlDataAdapter da = new SqlDataAdapter())
+                    {
+                        using (DataTable dt = new DataTable())
+                        {
+                            da.Fill(dt);
+                            dgvBuscarEquipamento.DataSource = dt;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar dados\n\n" + ex.Message);
+            }
+
         }
     }
 }

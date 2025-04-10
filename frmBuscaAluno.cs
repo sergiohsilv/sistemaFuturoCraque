@@ -21,8 +21,9 @@ namespace sistemaFuturoCraque
         private void btnCadastrarAluno_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmCadastroAluno frm = new frmCadastroAluno();
+            frmCadastroAluno frm = new frmCadastroAluno(0);
             frm.Show();
+
         }
 
         private void btnBuscarAluno_Click(object sender, EventArgs e)
@@ -125,11 +126,24 @@ namespace sistemaFuturoCraque
 
         }
 
-       /* private void btnEditarAluno_Click(object sender, EventArgs e)
+        private void btnEditarAluno_Click(object sender, EventArgs e)
+         {
+             
+         }
+        
+
+        private void btnEditarAluno_Click_1(object sender, EventArgs e)
+        {
+          
+
+        }
+
+        private void btnEditarAluno_Click_2(object sender, EventArgs e)
         {
             if (dgvBuscaAluno.SelectedRows.Count > 0)
             {
                 int idAluno = Convert.ToInt32(dgvBuscaAluno.SelectedRows[0].Cells["idAluno"].Value);
+
 
                 frmCadastroAluno frm = new frmCadastroAluno(idAluno);
                 frm.ShowDialog();
@@ -140,8 +154,7 @@ namespace sistemaFuturoCraque
             {
                 MessageBox.Show("Selecione um aluno para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
         }
-       */
-       
     }
 }

@@ -99,6 +99,7 @@
             this.btnEditarEquipamento.TabIndex = 5;
             this.btnEditarEquipamento.Text = "Editar";
             this.btnEditarEquipamento.UseVisualStyleBackColor = false;
+            this.btnEditarEquipamento.Click += new System.EventHandler(this.btnEditarEquipamento_Click);
             // 
             // label1
             // 
