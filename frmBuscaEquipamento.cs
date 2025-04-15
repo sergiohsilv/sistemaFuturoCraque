@@ -89,9 +89,9 @@ namespace sistemaFuturoCraque
                 using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
                 {
                     cn.Open();
-                    var sqlQuery = "Select * from aluno Where nomeAluno Like '%" + txtBuscaEquipamento.Text + "%'";
+                    var sqlQuery = "Select * from equipamento Where itemEquipamemto Like '%" + txtBuscaEquipamento.Text + "%'";
 
-                    using (SqlDataAdapter da = new SqlDataAdapter())
+                    using (SqlDataAdapter da = new SqlDataAdapter(sqlQuery, cn))
                     {
                         using (DataTable dt = new DataTable())
                         {
@@ -106,6 +106,40 @@ namespace sistemaFuturoCraque
                 MessageBox.Show("Erro ao carregar dados\n\n" + ex.Message);
             }
 
+        }
+
+        private void btnExcluirEquipamento_Click(object sender, EventArgs e)
+        {
+            if (dgvBuscarEquipamento.SelectedRows.Count > 0)
+            {
+                int idEquipamento = Convert.ToInt32(dgvBuscarEquipamento.SelectedRows[0].Cells["idEquipamento"].Value);
+
+                var confirm = MessageBox.Show("Tem Certeza que deseja Excluir este Equipamento?", "Confirmar Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                        {
+                            cn.Open();
+                            string sql = "DELETE FROM equipamento WHERE idEquipamento = @id";
+                            using (SqlCommand cmd = new SqlCommand(sql, cn))
+                            {
+                                cmd.Parameters.AddWithValue("@id", idEquipamento);
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Aluno excluido com sucesso!");
+                                BuscarNovamente();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao Excluir aluno \n\n" + ex.Message);
+                    }
+
+                }
+
+            }
         }
     }
 }

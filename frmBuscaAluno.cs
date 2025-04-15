@@ -33,23 +33,20 @@ namespace sistemaFuturoCraque
                 using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
                 {
                     cn.Open();
-                    var sqlQuery = "SELECT * FROM aluno WHERE idAluno LIKE @idAluno OR nomeAluno LIKE @nomeAluno OR cpfAluno like @cpfAluno OR nomeRespAluno like @nomeResp";
-                    using (SqlCommand cmd = new SqlCommand(sqlQuery, cn))
+                    var sqlQuery = "select * from aluno where nomeAluno like '%" + txtBuscarAluno.Text + "%'" +
+             "or idAluno like '%" + txtBuscarAluno.Text + "%'" +
+             "or rgAluno like '%" + txtBuscarAluno.Text + "%'" +
+             "or cpfAluno like '%" + txtBuscarAluno.Text + "%'";
+                    using (SqlDataAdapter da = new SqlDataAdapter(sqlQuery, cn))
                     {
-                        cmd.Parameters.AddWithValue("@idAluno", "%" + txtBuscarAluno.Text + "%");
-                        cmd.Parameters.AddWithValue("@nomeAluno", "%" + txtBuscarAluno.Text + "%");
-                        cmd.Parameters.AddWithValue("@cpfAluno", "%" + txtBuscarAluno.Text + "%");
-                        cmd.Parameters.AddWithValue("@nomeResp", "%" + txtBuscarAluno.Text + "%");
-
-                        using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-
-                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        using (DataTable dt = new DataTable())
                         {
-                            DataTable dt = new DataTable();
-                            dt.Load(reader);
-                            dgvBuscaAluno.DataSource = dt;
+                            da.Fill(dt);
 
+                            dgvBuscaAluno.DataSource = dt;
                         }
+
+
                     }
                 }
             }
@@ -80,7 +77,7 @@ namespace sistemaFuturoCraque
                         using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
                         {
                             cn.Open();
-                            string sql = "DELETE * FROM aluno WHERE idAluno = @id";
+                            string sql = "DELETE  FROM aluno WHERE idAluno = @id";
                             using (SqlCommand cmd = new SqlCommand(sql, cn))
                             {
                                 cmd.Parameters.AddWithValue("@id", idAluno);
@@ -109,7 +106,7 @@ namespace sistemaFuturoCraque
                     cn.Open();
                     var sqlQuery = "Select * from aluno Where nomeAluno Like '%" + txtBuscarAluno.Text + "%'";
 
-                    using (SqlDataAdapter da = new SqlDataAdapter())
+                    using (SqlDataAdapter da = new SqlDataAdapter(sqlQuery, cn))
                     {
                         using (DataTable dt = new DataTable())
                         {

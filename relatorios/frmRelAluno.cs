@@ -57,7 +57,7 @@ namespace sistemaFuturoCraque.relatorios
 
                 e.Graphics.DrawString(row.Cells["idAluno"].Value?.ToString(), fonteCorpo, Brushes.Black, margemEsquerda, y);
                 e.Graphics.DrawString(row.Cells["nomeAluno"].Value?.ToString(), fonteCorpo, Brushes.Black, margemEsquerda + 50, y);
-                e.Graphics.DrawString(row.Cells["cpfAlunos"].Value?.ToString(), fonteCorpo, Brushes.Black, margemEsquerda + 250, y);
+                e.Graphics.DrawString(row.Cells["cpfAluno"].Value?.ToString(), fonteCorpo, Brushes.Black, margemEsquerda + 250, y);
                 e.Graphics.DrawString(row.Cells["equipeAluno"].Value?.ToString(), fonteCorpo, Brushes.Black, margemEsquerda + 450, y);
 
                 y += linhaAltura;
@@ -87,6 +87,11 @@ namespace sistemaFuturoCraque.relatorios
             PrintPreviewDialog preview = new PrintPreviewDialog();
             preview.Document = documento;
             preview.ShowDialog();
+        }
+
+        private void dgvAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

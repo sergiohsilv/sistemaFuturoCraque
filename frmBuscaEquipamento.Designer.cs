@@ -86,6 +86,7 @@
             this.btnExcluirEquipamento.TabIndex = 4;
             this.btnExcluirEquipamento.Text = "Excluir";
             this.btnExcluirEquipamento.UseVisualStyleBackColor = false;
+            this.btnExcluirEquipamento.Click += new System.EventHandler(this.btnExcluirEquipamento_Click);
             // 
             // btnEditarEquipamento
             // 

@@ -21,7 +21,7 @@ namespace sistemaFuturoCraque
         private void btnCadastarFunc_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmCadastroFuncionario frm = new frmCadastroFuncionario();
+            frmCadastroFuncionario frm = new frmCadastroFuncionario(0);
             frm.Show();
         }
 
@@ -66,7 +66,79 @@ namespace sistemaFuturoCraque
 
         private void btnEditarFunc_Click(object sender, EventArgs e)
         {
+            if (dgvBuscarFuncionario.SelectedRows.Count > 0)
+            {
+                int idFunc = Convert.ToInt32(dgvBuscarFuncionario.SelectedRows[0].Cells["idFunc"].Value);
 
+
+                frmCadastroFuncionario frm = new frmCadastroFuncionario(idFunc);
+                frm.ShowDialog();
+
+                BuscarNovamente();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um aluno para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void BuscarNovamente()
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                {
+                    cn.Open();
+                    var sqlQuery = "Select * from funcionario Where idFunc Like '%" + txtBuscarFunc.Text + "%'";
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(sqlQuery, cn))
+                    {
+                        using (DataTable dt = new DataTable())
+                        {
+                            da.Fill(dt);
+                            dgvBuscarFuncionario.DataSource = dt;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar dados\n\n" + ex.Message);
+            }
+
+        }
+
+        private void btnExcluirFunc_Click(object sender, EventArgs e)
+        {
+            if (dgvBuscarFuncionario.SelectedRows.Count > 0)
+            {
+                int idFunc = Convert.ToInt32(dgvBuscarFuncionario.SelectedRows[0].Cells["idFunc"].Value);
+
+                var confirm = MessageBox.Show("Tem Certeza que deseja Excluir este Funcionario?", "Confirmar Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                        {
+                            cn.Open();
+                            string sql = "DELETE FROM funcionario WHERE idFunc = @id";
+                            using (SqlCommand cmd = new SqlCommand(sql, cn))
+                            {
+                                cmd.Parameters.AddWithValue("@id", idFunc);
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Funcionario excluido com sucesso!");
+                                BuscarNovamente();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao Excluir aluno \n\n" + ex.Message);
+                    }
+
+                }
+
+            }
         }
     }
 }

@@ -34,6 +34,7 @@
             this.dgvAlunos = new System.Windows.Forms.DataGridView();
             this.panelRelatorio = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
             this.panelRelatorio.SuspendLayout();
@@ -83,9 +84,11 @@
             this.dgvAlunos.Name = "dgvAlunos";
             this.dgvAlunos.Size = new System.Drawing.Size(770, 258);
             this.dgvAlunos.TabIndex = 15;
+            this.dgvAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlunos_CellContentClick);
             // 
             // panelRelatorio
             // 
+            this.panelRelatorio.Controls.Add(this.button1);
             this.panelRelatorio.Controls.Add(this.label2);
             this.panelRelatorio.Controls.Add(this.dgvAlunos);
             this.panelRelatorio.Controls.Add(this.btnImprimir);
@@ -103,6 +106,18 @@
             this.label2.Size = new System.Drawing.Size(170, 25);
             this.label2.TabIndex = 16;
             this.label2.Text = "Relatorio Alunos";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Firebrick;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.SystemColors.Window;
+            this.button1.Location = new System.Drawing.Point(10, 318);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Sair";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmRelAluno
             // 
@@ -131,5 +146,6 @@
         private System.Windows.Forms.DataGridView dgvAlunos;
         private System.Windows.Forms.Panel panelRelatorio;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

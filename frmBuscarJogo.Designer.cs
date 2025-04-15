@@ -100,6 +100,7 @@
             this.btnExcluirJogo.TabIndex = 5;
             this.btnExcluirJogo.Text = "Excluir";
             this.btnExcluirJogo.UseVisualStyleBackColor = false;
+            this.btnExcluirJogo.Click += new System.EventHandler(this.btnExcluirJogo_Click);
             // 
             // label1
             // 

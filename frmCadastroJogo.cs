@@ -14,6 +14,8 @@ namespace sistemaFuturoCraque
 {
     public partial class frmCadastroJogo : Form
     {
+
+        int idJogo = 0;
             public class ComboboxItem
             {
                 public string Text { get; set; }
@@ -29,6 +31,46 @@ namespace sistemaFuturoCraque
         {
             InitializeComponent();
             CarregarEquipe();
+            this.idJogo = idJogo;
+
+            if (this.idJogo > 0)
+                GetJogo(idJogo);
+        }
+
+        private void GetJogo(int idAluno)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                {
+                    cn.Open();
+                    var sql = "select * from jogo where idJogo=" + idJogo;
+                    using (SqlCommand cmd = new SqlCommand(sql, cn))
+                    {
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            if (dr.HasRows)
+                            {
+                                if (dr.Read())
+
+                                {
+                                    txtTimeAdversario.Text = dr["timeadvJogo"].ToString();
+                                    dtpDataJogo.Text = dr["dataJogo"].ToString();
+                                    txtHorarioJogo.Text = dr["horaJogo"].ToString();
+                                    txtLocalJogo.Text = dr["localJogo"].ToString();
+                                    txtTempoJogo.Text = dr["tempoJogo"].ToString();
+                                    cmbEquipeJogo.Text = dr["idEquipe"].ToString();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Dados não atualizado .\n\n" + ex.Message);
+
+            }
         }
 
         private void CarregarEquipe()
@@ -60,7 +102,11 @@ namespace sistemaFuturoCraque
                 {
 
                     cn.Open();
-                    var sql = "Insert into jogo (timeadvJogo, dataJogo, horaJogo, localJogo, tempoJogo, idEquipe) VALUES (@timeadv, @dataJogo, @horaJogo, @local, @tempo, @idEquipe)";
+                    var sql = "";
+                    if (this.idJogo == 0)
+                        sql = "Insert into jogo (timeadvJogo, dataJogo, horaJogo, localJogo, tempoJogo, idEquipe) VALUES (@timeadv, @dataJogo, @horaJogo, @local, @tempo, @idEquipe)";
+                    else
+                        sql = "UPDATE jogo set timeadvJogo = @timeavd , dataJogo = @dataJogo, horaJogo = @horaJogo, localJogo = @local, tempoJogo = @tempo, idEquipe = @idEquipe" + this.idJogo; 
                     using (SqlCommand cmd = new SqlCommand(sql, cn))
                     {
                         cmd.Parameters.AddWithValue("@timeadv", txtTimeAdversario.Text);

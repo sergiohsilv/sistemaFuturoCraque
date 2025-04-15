@@ -116,6 +116,7 @@
             this.btnExcluirEquipe.TabIndex = 19;
             this.btnExcluirEquipe.Text = "Excluir";
             this.btnExcluirEquipe.UseVisualStyleBackColor = false;
+            this.btnExcluirEquipe.Click += new System.EventHandler(this.btnExcluirEquipe_Click);
             // 
             // btnEditarEquipe
             // 

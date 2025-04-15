@@ -70,8 +70,7 @@ namespace sistemaFuturoCraque
                     if (this.idEquipe == 0)
                         sql = "INSERT INTO equipe (subEquipe, treinadorEquipe) VALUES (@subEquipe, @treinador)";
                     else
-                        sql = "UPDATE equipe set subEquipe = @subEquipe, treinadorEquipe = @treinador";
-
+                        sql = "UPDATE equipe set subEquipe = @subEquipe, treinadorEquipe = @treinador  where idEquipe =" + this.idEquipe;
                     using (SqlCommand cmd = new SqlCommand(sql, cn))
                     {
                         cmd.Parameters.AddWithValue("@subEquipe", txtSubEquipe.Text);

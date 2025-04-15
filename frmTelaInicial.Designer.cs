@@ -209,7 +209,7 @@
             this.menuContainer.Controls.Add(this.button3);
             this.menuContainer.Controls.Add(this.button4);
             this.menuContainer.Controls.Add(this.button5);
-            this.menuContainer.Location = new System.Drawing.Point(11, 321);
+            this.menuContainer.Location = new System.Drawing.Point(165, 134);
             this.menuContainer.Name = "menuContainer";
             this.menuContainer.Size = new System.Drawing.Size(127, 23);
             this.menuContainer.TabIndex = 13;
@@ -267,6 +267,7 @@
             this.button4.TabIndex = 17;
             this.button4.Text = "Relatorio Funcionario";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 

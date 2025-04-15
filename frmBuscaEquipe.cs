@@ -35,9 +35,9 @@ namespace sistemaFuturoCraque
                     var sqlQuery = "SELECT * FROM equipe WHERE subEquipe LIKE @subEquipe OR treinadorEquipe LIKE @treinador OR idEquipe like @idEquipe";
                     using (SqlCommand cmd = new SqlCommand(sqlQuery, cn))
                     {
-                        cmd.Parameters.AddWithValue("@idEquipe" , "%" + txtBuscarEquipe.Text );
-                        cmd.Parameters.AddWithValue("@subEquipe", "%" + txtBuscarEquipe.Text );
-                        cmd.Parameters.AddWithValue("@treinador", "%" + txtBuscarEquipe.Text );
+                        cmd.Parameters.AddWithValue("@idEquipe", "%" + txtBuscarEquipe.Text);
+                        cmd.Parameters.AddWithValue("@subEquipe", "%" + txtBuscarEquipe.Text);
+                        cmd.Parameters.AddWithValue("@treinador", "%" + txtBuscarEquipe.Text);
 
                         using (SqlDataAdapter da = new SqlDataAdapter(cmd))
 
@@ -91,7 +91,7 @@ namespace sistemaFuturoCraque
                     cn.Open();
                     var sqlQuery = "Select * from equipe Where subEquipe Like '%" + txtBuscarEquipe.Text + "%'";
 
-                    using (SqlDataAdapter da = new SqlDataAdapter())
+                    using (SqlDataAdapter da = new SqlDataAdapter(sqlQuery, cn))
                     {
                         using (DataTable dt = new DataTable())
                         {
@@ -104,6 +104,40 @@ namespace sistemaFuturoCraque
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar dados\n\n" + ex.Message);
+            }
+        }
+
+        private void btnExcluirEquipe_Click(object sender, EventArgs e)
+        {
+            if (dgvBuscarEquipe.SelectedRows.Count > 0)
+            {
+                int idEquipe = Convert.ToInt32(dgvBuscarEquipe.SelectedRows[0].Cells["idEquipe"].Value);
+
+                var confirm = MessageBox.Show("Tem Certeza que deseja Excluir esta Equipe?", "Confirmar Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                        {
+                            cn.Open();
+                            string sql = "DELETE  FROM equipe WHERE idEquipe = @id";
+                            using (SqlCommand cmd = new SqlCommand(sql, cn))
+                            {
+                                cmd.Parameters.AddWithValue("@id", idEquipe);
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Equipe excluida com sucesso!");
+                                BuscarNovamente();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao Excluir aluno \n\n" + ex.Message);
+                    }
+
+                }
+
             }
         }
     }

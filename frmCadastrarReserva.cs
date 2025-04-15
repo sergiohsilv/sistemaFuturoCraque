@@ -30,21 +30,18 @@ namespace sistemaFuturoCraque
 
         private string connectionString = conexao.IniciarCon;
 
-        public frmCadastrarReserva()
+        public frmCadastrarReserva(int idReserva)
         {
             InitializeComponent();
             CarregarEquipe();
             CarregarFunc();
             CarregarEquipamento();
-        }
-
-        public frmCadastrarReserva(int idReserva)
-        {
             this.idReserva = idReserva;
 
             if (this.idReserva > 0)
                 GetReserva(idReserva);
         }
+
 
 
         private void GetReserva(int idReserva)

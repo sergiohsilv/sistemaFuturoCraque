@@ -127,7 +127,7 @@ namespace sistemaFuturoCraque
                         sql = "Insert into aluno (nomeAluno, sexoAluno, rgALuno, cpfAluno, dtNascAluno, dtCadastroAluno, alturaAluno, pesoAluno, pebomAluno, posicaoAluno, horatreinoAluno, obsAluno, nomeRespAluno, rgRespAluno, cpfRespAluno,telefoneAluno, enderecoAluno, formapagAluno, equipeAluno) VALUES (@nomeAluno, @sexoAluno, @rgAluno, @cpfAluno, @dtNascAluno, @dtCadastro, @altura, @peso, @pebom, @posicao, @horatreino, @obs, @nomeResp, @rgResp, @cpfResp, @telefone, @endereco, @formapag, @equipe)";
 
                     else
-                        sql = "UPDATE aluno set nomeAluno = @nomeAluno, sexoAluno = sexoAluno, rgAluno = @rgAluno, cpfAluno = @cpfAluno, dtNascAluno = @dtNascAluno, dtCadastroAluno = @dtCadastro, alturaAluno = @altura, pesoAluno = @peso, pebomAluno = @pebom, posicaoAluno = @posicao, horatreinoAluno = @horatreino, obsAluno = @obs, nomeRespAluno = @nomeResp, cpfRespAluno = @cpfResp, telefoneAluno = @telefone, enderecoAluno = @endereco, formapagAluno = @formapag, equipeAluno = @equipe";
+                        sql = "UPDATE aluno set nomeAluno = @nomeAluno, sexoAluno = sexoAluno, rgAluno = @rgAluno, cpfAluno = @cpfAluno, dtNascAluno = @dtNascAluno, dtCadastroAluno = @dtCadastro, alturaAluno = @altura, pesoAluno = @peso, pebomAluno = @pebom, posicaoAluno = @posicao, horatreinoAluno = @horatreino, obsAluno = @obs, nomeRespAluno = @nomeResp, cpfRespAluno = @cpfResp, telefoneAluno = @telefone, enderecoAluno = @endereco, formapagAluno = @formapag, equipeAluno = @equipe where idAluno=" + this.idAluno;
                     using (SqlCommand cmd = new SqlCommand(sql, cn))
                     {
                         cmd.Parameters.AddWithValue("@nomeAluno", txtNomeAluno.Text);
@@ -200,6 +200,11 @@ namespace sistemaFuturoCraque
         private void button1_Click(object sender, EventArgs e)
         {
  
+        }
+
+        private void frmCadastroAluno_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

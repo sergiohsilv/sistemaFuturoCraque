@@ -26,7 +26,7 @@ namespace sistemaFuturoCraque
                 GetEquipamento(idEquipamento);
         }
 
-        private void GetEquipamento(int idAluno)
+        private void GetEquipamento(int idEquipamento)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace sistemaFuturoCraque
                         if (this.idEquipamento == 0)
                         sql = "Insert into equipamento (itemEquipamento, qtdEquipamento, fornEquipamento, telEquipamento, siteEquipamento) VALUES (@item, @qtd, @forn, @telForn, @site)";
                     else
-                        sql = "UPDATE equipamento set itemEquipamento = @item, qtdEquipamento = @qtd, fornEquipamento = @forn, telEquipamento = @telForn, siteEquipamento = @site";
+                        sql = "UPDATE equipamento set itemEquipamento = @item, qtdEquipamento = @qtd, fornEquipamento = @forn, telEquipamento = @telForn, siteEquipamento = @site where idEquipamento =" + this.idEquipamento;
                     using (SqlCommand cmd = new SqlCommand(sql, cn))
                     {
                         cmd.Parameters.AddWithValue("@item", txtItemEquipamento.Text);

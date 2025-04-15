@@ -104,7 +104,7 @@ namespace sistemaFuturoCraque
                     cn.Open();
                     var sqlQuery = "Select * from jogo Where timeadvJogo Like '%" + txtBuscarJogo.Text + "%'";
 
-                    using (SqlDataAdapter da = new SqlDataAdapter())
+                    using (SqlDataAdapter da = new SqlDataAdapter(sqlQuery, cn))
                     {
                         using (DataTable dt = new DataTable())
                         {
@@ -117,6 +117,40 @@ namespace sistemaFuturoCraque
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar dados\n\n" + ex.Message);
+            }
+        }
+
+        private void btnExcluirJogo_Click(object sender, EventArgs e)
+        {
+            if (dgvBuscarJogo.SelectedRows.Count > 0)
+            {
+                int idJogo = Convert.ToInt32(dgvBuscarJogo.SelectedRows[0].Cells["idJogo"].Value);
+
+                var confirm = MessageBox.Show("Tem Certeza que deseja Excluir este Jogo?", "Confirmar Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                        {
+                            cn.Open();
+                            string sql = "DELETE FROM jogo WHERE idJogo = @id";
+                            using (SqlCommand cmd = new SqlCommand(sql, cn))
+                            {
+                                cmd.Parameters.AddWithValue("@id", idJogo);
+                                cmd.ExecuteNonQuery();
+                                MessageBox.Show("Jogo excluido com sucesso!");
+                                BuscarNovamente();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao Excluir aluno \n\n" + ex.Message);
+                    }
+
+                }
+
             }
         }
     }

@@ -113,7 +113,7 @@ namespace sistemaFuturoCraque
 
         private DataTable BuscarAlunos()
         {
-            string query = "SELECT idAluno, nomeAluno, cpfAluno FROM aluno";
+            string query = "SELECT idAluno, nomeAluno, cpfAluno, equipeAluno FROM aluno";
             DataTable tabela = new DataTable();
 
             using (SqlConnection conn = new SqlConnection(conexao.IniciarCon))
@@ -135,6 +135,29 @@ namespace sistemaFuturoCraque
         private void transition_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DataTable funcionario = BuscarFuncioanrio();
+            frmRelatorioFuncionario relatorio = new frmRelatorioFuncionario();
+            relatorio.CarregarDados(funcionario);
+            relatorio.ShowDialog();
+        }
+
+        private DataTable BuscarFuncioanrio()
+        {
+            string query = "SELECT idFunc, nomeFunc, cpfFunc, cargoFunc FROM funcionario";
+            DataTable tabela = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(conexao.IniciarCon))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+            {
+                conn.Open();
+                da.Fill(tabela);
+            }
+            return tabela;
         }
     }
 }

@@ -14,10 +14,56 @@ namespace sistemaFuturoCraque
 {
     public partial class frmCadastroFuncionario : Form
     {
-        public frmCadastroFuncionario()
+        int idFuncionario = 0;
+        public frmCadastroFuncionario(int idFuncioanrio)
         {
             InitializeComponent();
+            this.idFuncionario = idFuncioanrio;
+
+            if (this.idFuncionario > 0)
+                GetFuncionario(idFuncionario);
         }
+
+        private void GetFuncionario(int idFuncionario)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(conexao.IniciarCon))
+                {
+                    cn.Open();
+                    var sql = "select * from funcionario where idFunc=" + idFuncionario;
+                    using (SqlCommand cmd = new SqlCommand(sql, cn))
+                    {
+                        using (SqlDataReader dr = cmd.ExecuteReader())
+                        {
+                            if (dr.HasRows)
+                            {
+                                if (dr.Read())
+
+                                {
+                                    txtNomeCompletoFunc.Text = dr["nomeFunc"].ToString();
+                                    dtpCadastroFunc.Text = dr["dtCadastroFunc"].ToString();
+                                    cmbSexoFunc.Text = dr["sexoFunc"].ToString();
+                                    txtRgFunc.Text = dr["rgFunc"].ToString();
+                                    txtCpfFunc.Text = dr["cpfFunc"].ToString();
+                                    dtpDataNascimentoFunc.Text = dr["dataNascFunc"].ToString();
+                                    txtCargoFunc.Text = dr["cargoFunc"].ToString();
+                                    txtNomeUsuarioFunc.Text = dr["usuarioFunc"].ToString();
+                                    txtSenhaFunc.Text = dr["senhaFunc"].ToString();
+                                    txtEmailFunc.Text = dr["emailFunc"].ToString();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Dados não atualizado .\n\n" + ex.Message);
+
+            }
+        }
+
 
         private void btnCadastrarFunc_Click(object sender, EventArgs e)
         {
@@ -31,7 +77,11 @@ namespace sistemaFuturoCraque
                 {
 
                     cn.Open();
-                    var sql = "Insert into funcionario (nomeFunc, dtCadastroFunc, sexoFunc, rgFunc, cpfFunc, dataNascFunc, cargoFunc, usuarioFunc, senhaFunc, emailFunc) VALUES (@nomeFunc, @dtCadastroFunc, @sexoFunc, @rgFunc, @cpfFunc, @dtNascFunc, @cargoFunc, @usuarioFunc, @senhaFunc, @emailFunc)";
+                    var sql = "";
+                    if(this.idFuncionario == 0)
+                        sql = "Insert into funcionario (nomeFunc, dtCadastroFunc, sexoFunc, rgFunc, cpfFunc, dataNascFunc, cargoFunc, usuarioFunc, senhaFunc, emailFunc) VALUES (@nomeFunc, @dtCadastroFunc, @sexoFunc, @rgFunc, @cpfFunc, @dtNascFunc, @cargoFunc, @usuarioFunc, @senhaFunc, @emailFunc)";
+                    else
+                        sql = "UPDATE funcionario set nomeFunc = @nomeFunc, dtCadastroFunc = @dtCadastroFunc, sexoFunc = @sexoFunc, rgFunc = @rgFunc, cpfFunc = @cpfFunc, dataNascFunc = @dtNascFunc, cargoFunc = @cargoFunc usuarioFunc = @usuarioFunc, senhaFunc = @senhaFunc, emailFunc = @emailFunc where idFunc ="+ this.idFuncionario; 
                     using (SqlCommand cmd = new SqlCommand(sql, cn))
                     {
                         cmd.Parameters.AddWithValue("@nomeFunc", txtNomeCompletoFunc.Text);

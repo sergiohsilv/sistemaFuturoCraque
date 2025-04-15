@@ -138,6 +138,7 @@
             this.btnExcluirReserva.TabIndex = 16;
             this.btnExcluirReserva.Text = "Excluir";
             this.btnExcluirReserva.UseVisualStyleBackColor = false;
+            this.btnExcluirReserva.Click += new System.EventHandler(this.btnExcluirReserva_Click);
             // 
             // btnSair
             // 
