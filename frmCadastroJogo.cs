@@ -106,7 +106,7 @@ namespace sistemaFuturoCraque
                     if (this.idJogo == 0)
                         sql = "Insert into jogo (timeadvJogo, dataJogo, horaJogo, localJogo, tempoJogo, idEquipe) VALUES (@timeadv, @dataJogo, @horaJogo, @local, @tempo, @idEquipe)";
                     else
-                        sql = "UPDATE jogo set timeadvJogo = @timeavd , dataJogo = @dataJogo, horaJogo = @horaJogo, localJogo = @local, tempoJogo = @tempo, idEquipe = @idEquipe" + this.idJogo; 
+                        sql = "UPDATE jogo set timeadvJogo = @timeadv , dataJogo = @dataJogo, horaJogo = @horaJogo, localJogo = @local, tempoJogo = @tempo, idEquipe = @idEquipe" + this.idJogo; 
                     using (SqlCommand cmd = new SqlCommand(sql, cn))
                     {
                         cmd.Parameters.AddWithValue("@timeadv", txtTimeAdversario.Text);

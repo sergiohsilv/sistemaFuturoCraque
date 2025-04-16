@@ -159,5 +159,76 @@ namespace sistemaFuturoCraque
             }
             return tabela;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataTable equipamento = BuscarEquipamento();
+            frmRelatorioEquipamento relatorio = new frmRelatorioEquipamento();
+            relatorio.CarregarDados(equipamento);
+            relatorio.ShowDialog();
+
+        }
+
+        private DataTable BuscarEquipamento()
+        {
+            string query = "SELECT idEquipamento, itemEquipamento, fornEquipamento, qtdEquipamento FROM equipamento";
+            DataTable tabela = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(conexao.IniciarCon))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+            {
+                conn.Open();
+                da.Fill(tabela);
+            }
+            return tabela;
+        }
+
+        private void relEquipe_Click(object sender, EventArgs e)
+        {
+            DataTable equipe = BuscarEquipe();
+            frmRelEquipe relatorio = new frmRelEquipe();
+            relatorio.CarregarDados(equipe);
+            relatorio.ShowDialog();
+        }
+
+        private DataTable BuscarEquipe()
+        {
+            string query = "SELECT idEquipe, subEquipe, treinadorEquipe FROM equipe";
+            DataTable tabela = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(conexao.IniciarCon))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+            {
+                conn.Open();
+                da.Fill(tabela);
+            }
+            return tabela;
+        }
+
+        private void btnRelReserva_Click(object sender, EventArgs e)
+        {
+            DataTable equipe = BuscarReserva();
+            frmRelatorioReserva relatorio = new frmRelatorioReserva();
+            relatorio.CarregarDados(equipe);
+            relatorio.ShowDialog();
+
+        }
+
+        private DataTable BuscarReserva()
+        {
+            string query = "SELECT idReserva, dtReserva, idEquipe, idEquipamento, idFunc FROM reserva";
+            DataTable tabela = new DataTable();
+
+            using (SqlConnection conn = new SqlConnection(conexao.IniciarCon))
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+            {
+                conn.Open();
+                da.Fill(tabela);
+            }
+            return tabela;
+        }
     }
 }

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.btnImprimir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAlunos = new System.Windows.Forms.DataGridView();
             this.panelRelatorio = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).BeginInit();
             this.panelRelatorio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnImprimir
@@ -53,16 +53,6 @@
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::sistemaFuturoCraque.Properties.Resources.Captura_de_tela_2025_03_13_083650;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(805, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -97,16 +87,6 @@
             this.panelRelatorio.Size = new System.Drawing.Size(776, 355);
             this.panelRelatorio.TabIndex = 16;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(315, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 25);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Relatorio Alunos";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Firebrick;
@@ -118,6 +98,27 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Sair";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(315, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 25);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Relatorio Alunos";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::sistemaFuturoCraque.Properties.Resources.Captura_de_tela_2025_03_13_083650;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(805, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // frmRelAluno
             // 
@@ -128,12 +129,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmRelAluno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRelAluno";
             this.Load += new System.EventHandler(this.frmRelAluno_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).EndInit();
             this.panelRelatorio.ResumeLayout(false);
             this.panelRelatorio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

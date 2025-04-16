@@ -32,8 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnImprimirRelFuncionario = new System.Windows.Forms.Button();
             this.panelRelatorioFunc = new System.Windows.Forms.Panel();
-            this.dgvFuncionario = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.dgvFuncionario = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelRelatorioFunc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).BeginInit();
@@ -85,16 +85,6 @@
             this.panelRelatorioFunc.Size = new System.Drawing.Size(776, 355);
             this.panelRelatorioFunc.TabIndex = 16;
             // 
-            // dgvFuncionario
-            // 
-            this.dgvFuncionario.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFuncionario.Location = new System.Drawing.Point(3, 46);
-            this.dgvFuncionario.Name = "dgvFuncionario";
-            this.dgvFuncionario.Size = new System.Drawing.Size(770, 258);
-            this.dgvFuncionario.TabIndex = 16;
-            this.dgvFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionario_CellContentClick);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Firebrick;
@@ -106,6 +96,17 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Sair";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dgvFuncionario
+            // 
+            this.dgvFuncionario.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFuncionario.Location = new System.Drawing.Point(3, 46);
+            this.dgvFuncionario.Name = "dgvFuncionario";
+            this.dgvFuncionario.Size = new System.Drawing.Size(770, 258);
+            this.dgvFuncionario.TabIndex = 16;
+            this.dgvFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionario_CellContentClick);
             // 
             // frmRelatorioFuncionario
             // 

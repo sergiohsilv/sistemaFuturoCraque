@@ -1,6 +1,6 @@
 ﻿namespace sistemaFuturoCraque
 {
-    partial class frmRelatorioReserva
+    partial class frmRelEquipe
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnImprimirRelReserva = new System.Windows.Forms.Button();
-            this.panelReserva = new System.Windows.Forms.Panel();
-            this.dgvReserva = new System.Windows.Forms.DataGridView();
+            this.panelEquipe = new System.Windows.Forms.Panel();
+            this.dgvEquipe = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnImprimirEquipe = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.panelReserva.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReserva)).BeginInit();
+            this.panelEquipe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquipe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,44 +45,30 @@
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(268, 9);
+            this.label1.Location = new System.Drawing.Point(295, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 31);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Relatório de Reserva";
+            this.label1.Size = new System.Drawing.Size(214, 31);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Relatorio Equipe";
             // 
-            // btnImprimirRelReserva
+            // panelEquipe
             // 
-            this.btnImprimirRelReserva.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnImprimirRelReserva.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImprimirRelReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimirRelReserva.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnImprimirRelReserva.Location = new System.Drawing.Point(691, 319);
-            this.btnImprimirRelReserva.Name = "btnImprimirRelReserva";
-            this.btnImprimirRelReserva.Size = new System.Drawing.Size(75, 23);
-            this.btnImprimirRelReserva.TabIndex = 16;
-            this.btnImprimirRelReserva.Text = "Imprimir";
-            this.btnImprimirRelReserva.UseVisualStyleBackColor = false;
-            this.btnImprimirRelReserva.Click += new System.EventHandler(this.btnImprimirRelReserva_Click);
+            this.panelEquipe.Controls.Add(this.btnSair);
+            this.panelEquipe.Controls.Add(this.btnImprimirEquipe);
+            this.panelEquipe.Controls.Add(this.dgvEquipe);
+            this.panelEquipe.Location = new System.Drawing.Point(12, 73);
+            this.panelEquipe.Name = "panelEquipe";
+            this.panelEquipe.Size = new System.Drawing.Size(776, 355);
+            this.panelEquipe.TabIndex = 15;
             // 
-            // panelReserva
+            // dgvEquipe
             // 
-            this.panelReserva.Controls.Add(this.btnSair);
-            this.panelReserva.Controls.Add(this.dgvReserva);
-            this.panelReserva.Controls.Add(this.btnImprimirRelReserva);
-            this.panelReserva.Location = new System.Drawing.Point(12, 73);
-            this.panelReserva.Name = "panelReserva";
-            this.panelReserva.Size = new System.Drawing.Size(776, 355);
-            this.panelReserva.TabIndex = 17;
-            // 
-            // dgvReserva
-            // 
-            this.dgvReserva.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvReserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReserva.Location = new System.Drawing.Point(3, 46);
-            this.dgvReserva.Name = "dgvReserva";
-            this.dgvReserva.Size = new System.Drawing.Size(770, 258);
-            this.dgvReserva.TabIndex = 17;
+            this.dgvEquipe.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvEquipe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEquipe.Location = new System.Drawing.Point(3, 46);
+            this.dgvEquipe.Name = "dgvEquipe";
+            this.dgvEquipe.Size = new System.Drawing.Size(770, 258);
+            this.dgvEquipe.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -91,8 +77,21 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(805, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnImprimirEquipe
+            // 
+            this.btnImprimirEquipe.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnImprimirEquipe.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImprimirEquipe.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnImprimirEquipe.Location = new System.Drawing.Point(691, 319);
+            this.btnImprimirEquipe.Name = "btnImprimirEquipe";
+            this.btnImprimirEquipe.Size = new System.Drawing.Size(75, 23);
+            this.btnImprimirEquipe.TabIndex = 1;
+            this.btnImprimirEquipe.Text = "Imprimir";
+            this.btnImprimirEquipe.UseVisualStyleBackColor = false;
+            this.btnImprimirEquipe.Click += new System.EventHandler(this.btnImprimirEquipe_Click);
             // 
             // btnSair
             // 
@@ -102,25 +101,24 @@
             this.btnSair.Location = new System.Drawing.Point(10, 318);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
-            this.btnSair.TabIndex = 18;
+            this.btnSair.TabIndex = 2;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // frmRelatorioReserva
+            // frmRelEquipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelReserva);
+            this.Controls.Add(this.panelEquipe);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "frmRelatorioReserva";
+            this.Name = "frmRelEquipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmRelatorioReserva";
-            this.Load += new System.EventHandler(this.frmRelatorioReserva_Load);
-            this.panelReserva.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReserva)).EndInit();
+            this.Text = "frmRelEquipe";
+            this.panelEquipe.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEquipe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -128,11 +126,12 @@
         }
 
         #endregion
+
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnImprimirRelReserva;
-        private System.Windows.Forms.Panel panelReserva;
-        private System.Windows.Forms.DataGridView dgvReserva;
+        private System.Windows.Forms.Panel panelEquipe;
+        private System.Windows.Forms.DataGridView dgvEquipe;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnImprimirEquipe;
     }
 }

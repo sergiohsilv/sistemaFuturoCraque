@@ -144,6 +144,12 @@
     <Compile Include="frmCadastroJogo.Designer.cs">
       <DependentUpon>frmCadastroJogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="relatorios\frmRelEquipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="relatorios\frmRelEquipe.Designer.cs">
+      <DependentUpon>frmRelEquipe.cs</DependentUpon>
+    </Compile>
     <Compile Include="relatorios\frmRelatorioEquipamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </Compile>
     <EmbeddedResource Include="relatorios\frmRelAluno.resx">
       <DependentUpon>frmRelAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="relatorios\frmRelEquipe.resx">
+      <DependentUpon>frmRelEquipe.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

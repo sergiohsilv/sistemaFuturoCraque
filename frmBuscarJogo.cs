@@ -91,7 +91,7 @@ namespace sistemaFuturoCraque
             }
             else
             {
-                MessageBox.Show("Selecione um aluno para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Selecione um jogo para editar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

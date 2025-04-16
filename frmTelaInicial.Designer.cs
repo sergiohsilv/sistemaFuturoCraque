@@ -38,21 +38,21 @@
             this.btnReserva = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.btnRelAluno = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.relEquipe = new System.Windows.Forms.Button();
+            this.btnRelFuncionario = new System.Windows.Forms.Button();
+            this.btnRelReserva = new System.Windows.Forms.Button();
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.btnCadastroAluno = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -170,46 +170,16 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::sistemaFuturoCraque.Properties.Resources.Futuro_Craque_removebg_preview;
-            this.pictureBox3.Location = new System.Drawing.Point(272, 58);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(500, 500);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::sistemaFuturoCraque.Properties.Resources.Futuro_Craque__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(1, -9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(143, 125);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::sistemaFuturoCraque.Properties.Resources.Captura_de_tela_2025_03_13_083650;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 98);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 444);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // menuContainer
             // 
             this.menuContainer.BackColor = System.Drawing.Color.Black;
             this.menuContainer.Controls.Add(this.btnRelatorio);
             this.menuContainer.Controls.Add(this.btnRelAluno);
             this.menuContainer.Controls.Add(this.button2);
-            this.menuContainer.Controls.Add(this.button3);
-            this.menuContainer.Controls.Add(this.button4);
-            this.menuContainer.Controls.Add(this.button5);
-            this.menuContainer.Location = new System.Drawing.Point(165, 134);
+            this.menuContainer.Controls.Add(this.relEquipe);
+            this.menuContainer.Controls.Add(this.btnRelFuncionario);
+            this.menuContainer.Controls.Add(this.btnRelReserva);
+            this.menuContainer.Location = new System.Drawing.Point(12, 321);
             this.menuContainer.Name = "menuContainer";
             this.menuContainer.Size = new System.Drawing.Size(127, 23);
             this.menuContainer.TabIndex = 13;
@@ -241,46 +211,49 @@
             this.button2.TabIndex = 15;
             this.button2.Text = "Relaorio Equipamento";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // relEquipe
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(3, 90);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(124, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Relatorio Equipe";
-            this.button3.UseVisualStyleBackColor = false;
+            this.relEquipe.BackColor = System.Drawing.SystemColors.Highlight;
+            this.relEquipe.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.relEquipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relEquipe.ForeColor = System.Drawing.SystemColors.Window;
+            this.relEquipe.Location = new System.Drawing.Point(3, 90);
+            this.relEquipe.Name = "relEquipe";
+            this.relEquipe.Size = new System.Drawing.Size(124, 23);
+            this.relEquipe.TabIndex = 16;
+            this.relEquipe.Text = "Relatorio Equipe";
+            this.relEquipe.UseVisualStyleBackColor = false;
+            this.relEquipe.Click += new System.EventHandler(this.relEquipe_Click);
             // 
-            // button4
+            // btnRelFuncionario
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Window;
-            this.button4.Location = new System.Drawing.Point(3, 119);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(124, 23);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Relatorio Funcionario";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnRelFuncionario.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnRelFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRelFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelFuncionario.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnRelFuncionario.Location = new System.Drawing.Point(3, 119);
+            this.btnRelFuncionario.Name = "btnRelFuncionario";
+            this.btnRelFuncionario.Size = new System.Drawing.Size(124, 23);
+            this.btnRelFuncionario.TabIndex = 17;
+            this.btnRelFuncionario.Text = "Relatorio Funcionario";
+            this.btnRelFuncionario.UseVisualStyleBackColor = false;
+            this.btnRelFuncionario.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // btnRelReserva
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Window;
-            this.button5.Location = new System.Drawing.Point(3, 148);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(124, 23);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Relatorio Reserva";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnRelReserva.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnRelReserva.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRelReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelReserva.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnRelReserva.Location = new System.Drawing.Point(3, 148);
+            this.btnRelReserva.Name = "btnRelReserva";
+            this.btnRelReserva.Size = new System.Drawing.Size(124, 23);
+            this.btnRelReserva.TabIndex = 18;
+            this.btnRelReserva.Text = "Relatorio Reserva";
+            this.btnRelReserva.UseVisualStyleBackColor = false;
+            this.btnRelReserva.Click += new System.EventHandler(this.btnRelReserva_Click);
             // 
             // menuTransition
             // 
@@ -299,6 +272,36 @@
             this.btnCadastroAluno.Text = "Alunos";
             this.btnCadastroAluno.UseVisualStyleBackColor = false;
             this.btnCadastroAluno.Click += new System.EventHandler(this.btnCadastroAluno_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::sistemaFuturoCraque.Properties.Resources.Futuro_Craque_removebg_preview;
+            this.pictureBox3.Location = new System.Drawing.Point(272, 58);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(500, 500);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::sistemaFuturoCraque.Properties.Resources.Futuro_Craque__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(1, -9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(143, 125);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::sistemaFuturoCraque.Properties.Resources.Captura_de_tela_2025_03_13_083650;
+            this.pictureBox1.Location = new System.Drawing.Point(1, 98);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 444);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmTelaInicial
             // 
@@ -322,10 +325,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTelaInicial";
             this.Load += new System.EventHandler(this.frmTelaInicial_Load);
+            this.menuContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuContainer.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,9 +351,9 @@
         private System.Windows.Forms.FlowLayoutPanel menuContainer;
         private System.Windows.Forms.Button btnRelAluno;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button relEquipe;
+        private System.Windows.Forms.Button btnRelFuncionario;
+        private System.Windows.Forms.Button btnRelReserva;
         private System.Windows.Forms.Timer menuTransition;
         private System.Windows.Forms.Button btnCadastroAluno;
     }

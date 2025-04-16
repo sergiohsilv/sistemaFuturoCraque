@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Printing; 
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
-namespace sistemaFuturoCraque.relatorios
+namespace sistemaFuturoCraque
 {
-    public partial class frmRelAluno : Form
+    public partial class frmRelEquipe : Form
     {
         private PrintDocument documento = new PrintDocument();
-
-        public frmRelAluno()
+        public frmRelEquipe()
         {
             InitializeComponent();
             documento.PrintPage += Documento_PrintPage;
@@ -24,7 +22,7 @@ namespace sistemaFuturoCraque.relatorios
 
         public void CarregarDados(DataTable dados)
         {
-            dgvAlunos.DataSource = dados;
+            dgvEquipe.DataSource = dados;
         }
 
         private void Documento_PrintPage(object sender, PrintPageEventArgs e)
@@ -40,25 +38,23 @@ namespace sistemaFuturoCraque.relatorios
             float y = margemSuperior;
 
             // Título
-            e.Graphics.DrawString("Relatório de Alunos", fonteTitulo, Brushes.Black, margemEsquerda, y);
+            e.Graphics.DrawString("Relatório de Equipe", fonteTitulo, Brushes.Black, margemEsquerda, y);
             y += linhaAltura * 2;
 
             // Cabeçalhos
             e.Graphics.DrawString("ID", fonteCabecalho, Brushes.Black, margemEsquerda, y);
-            e.Graphics.DrawString("Nome", fonteCabecalho, Brushes.Black, margemEsquerda + 50, y);
-            e.Graphics.DrawString("CPF Aluno", fonteCabecalho, Brushes.Black, margemEsquerda + 250, y);
-            e.Graphics.DrawString("Sub Equipe", fonteCabecalho, Brushes.Black, margemEsquerda + 450, y);
+            e.Graphics.DrawString("Sub", fonteCabecalho, Brushes.Black, margemEsquerda + 50, y);
+            e.Graphics.DrawString("Treinador", fonteCabecalho, Brushes.Black, margemEsquerda + 250, y);
             y += linhaAltura;
 
             // Dados do DataGridView
-            foreach (DataGridViewRow row in dgvAlunos.Rows)
+            foreach (DataGridViewRow row in dgvEquipe.Rows)
             {
                 if (row.IsNewRow) continue;
 
-                e.Graphics.DrawString(row.Cells["idAluno"].Value?.ToString(), fonteCorpo, Brushes.Black, margemEsquerda, y);
-                e.Graphics.DrawString(row.Cells["nomeAluno"].Value?.ToString(), fonteCorpo, Brushes.Black, margemEsquerda + 50, y);
-                e.Graphics.DrawString(row.Cells["cpfAluno"].Value?.ToString(), fonteCorpo, Brushes.Black, margemEsquerda + 250, y);
-                e.Graphics.DrawString(row.Cells["equipeAluno"].Value?.ToString(), fonteCorpo, Brushes.Black, margemEsquerda + 450, y);
+                e.Graphics.DrawString(row.Cells["idEquipe"].Value?.ToString(), fonteCorpo, Brushes.Black, margemEsquerda, y);
+                e.Graphics.DrawString(row.Cells["subEquipe"].Value?.ToString(), fonteCorpo, Brushes.Black, margemEsquerda + 50, y);
+                e.Graphics.DrawString(row.Cells["treinadorEquipe"].Value?.ToString(), fonteCorpo, Brushes.Black, margemEsquerda + 250, y);
 
                 y += linhaAltura;
 
@@ -72,29 +68,17 @@ namespace sistemaFuturoCraque.relatorios
 
             // Rodapé ou total opcional
             y += linhaAltura;
-            e.Graphics.DrawString("Total de alunos: " + (dgvAlunos.Rows.Count - 1), fonteCorpo, Brushes.Black, margemEsquerda, y);
+            e.Graphics.DrawString("Total de Equipe: " + (dgvEquipe.Rows.Count - 1), fonteCorpo, Brushes.Black, margemEsquerda, y);
         }
 
-
-        private void frmRelAluno_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void btnImprimir_Click(object sender, EventArgs e)
+        private void btnImprimirEquipe_Click(object sender, EventArgs e)
         {
             PrintPreviewDialog preview = new PrintPreviewDialog();
             preview.Document = documento;
             preview.ShowDialog();
         }
 
-        private void dgvAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmTelaInicial frm = new frmTelaInicial();

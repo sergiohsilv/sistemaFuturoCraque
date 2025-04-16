@@ -69,7 +69,7 @@ namespace sistemaFuturoCraque
 
             // Rodapé ou total opcional
             y += linhaAltura;
-            e.Graphics.DrawString("Total de alunos: " + (dgvFuncionario.Rows.Count - 1), fonteCorpo, Brushes.Black, margemEsquerda, y);
+            e.Graphics.DrawString("Total de Funcionario: " + (dgvFuncionario.Rows.Count - 1), fonteCorpo, Brushes.Black, margemEsquerda, y);
         }
 
         private void frmRelatorioFuncionario_Load(object sender, EventArgs e)
@@ -87,6 +87,13 @@ namespace sistemaFuturoCraque
         private void dgvFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmTelaInicial frm = new frmTelaInicial();
+            frm.Show();
         }
     }
 }
